@@ -1,0 +1,63 @@
+// logo
+
+// fills
+
+.skin{fill: white;}
+.hair{fill: #EDEEF2;}
+.shadow {fill: #EDEEF2;}
+.outline{fill: #2C49C9;}
+.stubble{fill: #536AD1;}
+
+
+
+.holder {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.svg-holder {
+	display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+
+  a {
+    display: block;
+    border: 0;
+
+    .brow {
+        transform: scale(1);
+        transition: all .1s ease-in;
+      }
+    .mouth {
+        transform:  rotate(0deg);
+        transition: all .1s ease-in;
+      }
+
+    &:hover {
+      border: 0;
+
+      .brow {
+        transform:  scale(1.02);
+      }
+      .mouth {
+        transform:  translate(-.25em, .125em);
+      }
+
+    }
+  }
+}
+
+.svg-content {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.stubble {
+  @include bp(phony) {
+    display: none;
+  };
+}

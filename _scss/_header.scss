@@ -1,0 +1,67 @@
+// header
+
+.wrp-header {
+  position: relative;
+  width: 100%;
+  background: $c-purple-tint;
+  transform: skewY(-1.5deg);
+
+  @include bp(tablish) {
+    margin-bottom: 2em;
+    padding: 1em 0;
+  };
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 1em;
+    background: $c-purple-tint;
+    transform: skewY(1.5deg);
+  }
+}
+
+.site-header {
+  transform: skewY(1.5deg);
+
+  @include bp(tablish) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 52em;
+  };
+}
+
+.logo {
+  width: 3em;
+}
+
+.site-nav {
+
+  ul {
+    display: flex;
+  }
+
+  li {
+
+    +li {
+      margin: 0 0 0 2em;
+    }
+
+    &:before {
+      content: "";
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 1em;
+    text-transform: $text-transform;
+    font-weight: 700;
+  }
+}
