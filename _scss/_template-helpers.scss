@@ -1,0 +1,22 @@
+// template helpers
+
+.wrp-page-content {
+
+  @include bp(tablish) {
+    padding: 4em;
+  };
+}
+
+.page-content {
+
+  @include bp(phony) {
+    margin: auto;
+    width: 80%;
+  };
+
+  @include bp(tablish) {
+    margin: auto;
+    width: 70%;
+    max-width: 52em;
+  };
+}

@@ -1,0 +1,35 @@
+// footer
+
+.wrp-site-footer {
+  border-top: .0625em solid $c-purple-shade;
+
+  @include bp(phony) {
+    padding: 2em 0 4em;
+  };
+
+  @include bp(tablish) {
+    padding: 4em 0 6em;
+  };
+}
+
+.site-footer {
+  font-size: smaller;
+
+  @include bp(phony) {
+    margin: auto;
+    width: 80%;
+  };
+
+  @include bp(tablish) {
+    margin: auto;
+    width: 70%;
+    max-width: 52em;
+  };
+
+  h4 {
+    text-align: center;
+  }
+  p {
+    color: $c-slate;
+  }
+}

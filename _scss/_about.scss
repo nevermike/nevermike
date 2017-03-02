@@ -1,0 +1,92 @@
+// about
+
+.aboutintro {
+
+  // @include bp(screeny) {
+  //   background: url(../images/little-me.png) 200% 50% no-repeat;
+  //   background-size: 50%;
+  //   @include transition-regular;
+  //
+  //   &:hover {
+  //     background: url(../images/little-me.png) 150% 50% no-repeat;
+  //     background-size: 50%;
+  //   }
+  // };
+
+  @include bp(screeny) {
+    position: relative;
+
+    &:before {
+      z-index: -10;
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: -50%;
+      width: 100%;
+      height: 18em;
+      background: url(../images/little-me.png) 200% 50% no-repeat;
+      opacity: .25;
+      transform: rotate(0deg);
+      @include transition-regular;
+    }
+
+    &:hover {
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        background: url(../images/little-me.png) 200% 50% no-repeat;
+        opacity: .85;
+        transform: rotate(3deg);
+      }
+    }
+  };
+}
+
+.experience {
+  background: $c-purple-tint;
+}
+
+.roll {
+
+  @include bp(screeny) {
+    margin: 1em auto 0;
+    width: 85%;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 .625em;
+
+      &__title {
+        align-self: center;
+        margin: 0;
+        font-size: small;
+        font-weight: 700;
+        color: $c-purple-shade;
+      }
+    }
+
+    &__summery {
+      padding: 0 .625em;
+      border-top: .0625em solid $c-purple-shade;
+
+      p {
+        margin-top: .5em;
+        font-size: small;
+      }
+    }
+  };
+}
+
+.linkedinjoke {
+
+  @include bp(tablish) {
+    margin: 2em auto;
+    width: 40%;
+    border: 1px solid $c-purple-shade;
+    transform: rotate(2deg);
+  };
+}

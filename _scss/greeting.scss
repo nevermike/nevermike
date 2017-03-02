@@ -1,0 +1,49 @@
+// greeting
+
+//keyframes
+
+@keyframes firstbubble {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrp-greeting {
+  background: $c-prime;
+
+  @include bp(tablish) {
+    margin-top: -2em;
+    padding: 4em 0 2em;
+  };
+}
+
+.greeting {
+
+  @include bp(tablish) {
+    margin: auto;
+    max-width: 24em;
+
+    img {
+      height: 3.625em;
+    }
+
+    div+div {
+      margin-top: 1em;
+    }
+
+    &__immichael {
+      text-align: right;
+    }
+
+    &__mike {
+      text-align: left;
+    }
+
+    &__whatevs {
+      text-align: right;
+    }
+  };
+}
