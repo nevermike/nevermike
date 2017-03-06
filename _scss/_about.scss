@@ -21,11 +21,11 @@
       content: "";
       position: absolute;
       top: 20%;
-      left: -50%;
+      left: 0%;
       width: 100%;
       height: 18em;
       background: url(../images/little-me.png) 200% 50% no-repeat;
-      opacity: .25;
+      opacity: 0;
       transform: rotate(0deg);
       @include transition-regular;
     }
@@ -77,6 +77,22 @@
         margin-top: .5em;
         font-size: small;
       }
+    }
+  };
+}
+
+.clients {
+
+  @include bp(tablish) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+
+    img {
+      margin: .5em 1em;
+      width: 50%;
     }
   };
 }

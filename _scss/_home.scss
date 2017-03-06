@@ -1,0 +1,15 @@
+// home
+
+.home {
+  background: $c-purple-tint;
+}
+
+.homeintro {
+  text-align: center;
+
+  h1 {
+    font-family: $body-font;
+    text-transform: none;
+    font-weight: 400;
+  }
+}
