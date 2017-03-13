@@ -52,6 +52,12 @@
 
   ul {
     display: flex;
+
+    @include bp(phony) {
+      justify-content: center;
+      margin: auto;
+      background: pink;
+    };
   }
 
   li {
@@ -82,5 +88,9 @@
       color: $c-black;
       border-bottom-color: $c-black;
     }
+
+    @include bp(phony) {
+      font-size: large;
+    };
   }
 }

@@ -13,3 +13,62 @@
     font-weight: 400;
   }
 }
+
+.whereyouat {
+
+  @include bp(tablish) {
+    padding-bottom: 4em;
+  };
+
+  nav {
+
+    ul {
+
+      @include bp(tablish) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      };
+
+      @include bp(screeny) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+      };
+    }
+
+    li {
+      flex-grow: 0;
+
+      @include bp(tablish) {
+        flex-basis: 8em;
+        margin: 1em;
+
+        &.at {
+          flex-basis: 100%;
+          text-align: center;
+
+          img {
+            width: 8em;
+          }
+        }
+      };
+
+      @include bp(screeny) {
+        flex-basis: 5em;
+
+        &.at {
+          flex-basis: 5em;
+          text-align: center;
+
+          img {
+            width: 5em;
+          }
+        }
+      };
+    }
+  }
+}

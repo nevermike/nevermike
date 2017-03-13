@@ -1,10 +1,22 @@
 // template helpers
 
+body {
+  animation: fadeinpage 1.3s 1;
+}
+
 .wrp-page-content {
 
+  @include bp(phony) {
+    padding: 2em 0;
+  }
+
   @include bp(tablish) {
-    padding: 4em;
+    padding: 4em 0;
   };
+
+  &--0 {
+    padding: 0;
+  }
 }
 
 .page-content {
@@ -15,6 +27,11 @@
   };
 
   @include bp(tablish) {
+    margin: auto;
+    width: 80%;
+    max-width: 28em;
+  };
+  @include bp(screeny) {
     margin: auto;
     width: 70%;
     max-width: 52em;

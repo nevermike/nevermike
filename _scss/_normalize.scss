@@ -88,6 +88,19 @@ nav ul,nav ol {
   padding: 0;
   list-style:none;
   list-style-image:none;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    +li {
+      margin: 0;
+    }
+
+    &:before {
+      content: "";
+    }
+  }
 }
 img {
   max-width: 100%;

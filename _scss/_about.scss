@@ -2,47 +2,23 @@
 
 .aboutintro {
 
-  // @include bp(screeny) {
-  //   background: url(../images/little-me.png) 200% 50% no-repeat;
-  //   background-size: 50%;
-  //   @include transition-regular;
-  //
-  //   &:hover {
-  //     background: url(../images/little-me.png) 150% 50% no-repeat;
-  //     background-size: 50%;
-  //   }
-  // };
+  &__image {
 
-  @include bp(screeny) {
-    position: relative;
+    @include bp(phony) {
+      display: block;
+      margin: 1em auto;
+      width: 50%;
+      border-radius: 100%;
+    };
 
-    &:before {
-      z-index: -10;
-      content: "";
-      position: absolute;
-      top: 20%;
-      left: 0%;
-      width: 100%;
-      height: 18em;
-      background: url(../images/little-me.png) 200% 50% no-repeat;
-      opacity: 0;
-      transform: rotate(0deg);
-      @include transition-regular;
-    }
-
-    &:hover {
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 20%;
-        left: 0%;
-        background: url(../images/little-me.png) 200% 50% no-repeat;
-        opacity: .85;
-        transform: rotate(3deg);
-      }
-    }
-  };
+    @include bp(tablish) {
+      float: left;
+      margin: 1em 2em 1em 0;
+      width: 25%;
+      border-radius: 100%;
+      shape-outside: circle();
+    };
+  }
 }
 
 .experience {
@@ -50,6 +26,61 @@
 }
 
 .roll {
+
+  @include bp(phony) {
+    margin: 1em auto 0;
+    width: 85%;
+
+    &__header {
+      font-size: large;
+
+      &__title {
+        margin: 0;
+        font-size: small;
+        font-weight: 700;
+        color: $c-purple-shade;
+      }
+    }
+
+    &__summery {
+      padding: 0 .25em;
+      border-top: .0625em solid $c-purple-shade;
+
+      p {
+        margin-top: .25em;
+        font-size: small;
+      }
+    }
+  };
+
+  @include bp(tablish) {
+    margin: 1em auto 0;
+    width: 85%;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 .625em;
+
+      &__title {
+        align-self: center;
+        margin: 0;
+        font-size: small;
+        font-weight: 700;
+        color: $c-purple-shade;
+      }
+    }
+
+    &__summery {
+      padding: 0 .625em;
+      border-top: .0625em solid $c-purple-shade;
+
+      p {
+        margin-top: .5em;
+        font-size: small;
+      }
+    }
+  };
 
   @include bp(screeny) {
     margin: 1em auto 0;
@@ -82,6 +113,19 @@
 }
 
 .clients {
+
+  @include bp(phony) {
+    display: flex;
+    justify-content: space-around;;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+
+    img {
+      margin: 1em;
+      width: 75%;
+    }
+  };
 
   @include bp(tablish) {
     display: flex;
