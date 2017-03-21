@@ -56,7 +56,6 @@
     @include bp(phony) {
       justify-content: center;
       margin: auto;
-      background: pink;
     };
   }
 
@@ -94,3 +93,26 @@
     };
   }
 }
+
+//  header fun
+
+// .page-header {
+//   position: fixed;
+//   left:0; top:0; width:100%;
+//   box-sizing:border-box;
+//
+//   transition: top 0.6s;
+//
+// }
+//
+// .page-header.off-canvas {
+//
+//   @include bp(phony) {
+//     top: -10em;
+//   };
+//   // top: -6em;
+// }
+// .page-header.fixed {
+//   top:0;
+// 	z-index: 9999;
+// }

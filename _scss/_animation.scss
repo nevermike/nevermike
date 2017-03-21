@@ -8,3 +8,16 @@
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
+
+//
+
+.popblock {
+  display: inline-block;
+  border: none;
+
+  &:hover {
+    transform: scale(1.1);
+    border: none;
+    box-shadow: 0 0 1em rgba($c-black, .25);
+  }
+}

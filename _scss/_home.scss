@@ -16,6 +16,10 @@
 
 .whereyouat {
 
+  @include bp(phony) {
+    padding-bottom: 2em;
+  };
+
   @include bp(tablish) {
     padding-bottom: 4em;
   };
@@ -23,6 +27,12 @@
   nav {
 
     ul {
+
+      @include bp(phony) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      };
 
       @include bp(tablish) {
         display: flex;
@@ -43,12 +53,33 @@
     li {
       flex-grow: 0;
 
+      &:before {
+        margin: 0;
+        padding: 0;
+      }
+
+      @include bp(phony) {
+        flex-basis: 8em;
+        margin: .5em;
+
+        &.at {
+          flex-basis: 100%;
+          // margin-bottom: -1em;
+          text-align: center;
+
+          img {
+            width: 3em;
+          }
+        }
+      };
+
       @include bp(tablish) {
         flex-basis: 8em;
         margin: 1em;
 
         &.at {
           flex-basis: 100%;
+          margin-bottom: -2em;
           text-align: center;
 
           img {
@@ -62,6 +93,7 @@
 
         &.at {
           flex-basis: 5em;
+          margin-bottom: 1em;
           text-align: center;
 
           img {

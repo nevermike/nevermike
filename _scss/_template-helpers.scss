@@ -4,6 +4,14 @@ body {
   animation: fadeinpage 1.3s 1;
 }
 
+.greeting {
+
+  &.ideas, &.work {
+    font-size: 4em;
+    text-align: center;
+  }
+}
+
 .wrp-page-content {
 
   @include bp(phony) {

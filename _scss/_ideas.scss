@@ -1,0 +1,82 @@
+// ideas
+
+.ideas {
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+
+      @include bp(phony) {
+        border: .25em solid white;
+        box-shadow: 0 0 1em rgba($c-black, .25);
+
+        +li {
+          margin-top: 4em;
+        }
+      };
+
+      @include bp(tablish) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        +li {
+          margin-top: 3em;
+        }
+      };
+
+      @include bp(screeny) {
+        flex-direction: row;
+      };
+
+      &:before {
+        content: "";
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &__img {
+
+      @include bp(tablish) {
+        margin: auto;
+        border: .25em solid white;
+        box-shadow: 0 0 1em rgba($c-black, .25);
+      };
+      @include bp(screeny) {
+        flex-basis: 20%;
+      };
+    }
+
+    &__copy {
+
+      @include bp(phony) {
+        padding: 2em 1em;
+      };
+      @include bp(tablish) {
+        padding: 2em;
+      };
+      @include bp(screeny) {
+        flex-basis: 70%;
+        padding: 0;
+      };
+    }
+  }
+}
+
+.ideas-footer {
+  background: $c-purple-tint;
+}
+
+.outlink-icon {
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    width: 4em;
+  }
+}

@@ -1,23 +1,24 @@
 ---
 layout: base
-title: Work
-canonical: https://nevermike.com/work/index.html
-navigation_weight: 2
+title: Ideas
+canonical: https://nevermike.com/writing/index.html
+navigation_weight: 3
 ---
 
 <div class="wrp-greeting">
-  <div class="greeting work">
-    🖥️👨‍💻📱
+  <div class="greeting ideas">
+    💡✍️💭
   </div>
 </div>
 
 <div class="wrp-page-content">
   <div class="page-content ideas">
     <ul class="ideas__list">
-      {% for post in site.categories.work %}
+      {% for post in site.posts %}
+      {% unless post.categories contains 'work' %}
         <li>
           <div class="ideas__list__img">
-            <a href="{{ post.url }}" class="popblock"><img src="{{ site.baseurl }}/assets/images/work/{{ post.image }}"></a>
+            <a href="{{ post.url }}" class="popblock"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
           </div>
           <div class="ideas__list__copy">
           <h3>
@@ -25,6 +26,7 @@ navigation_weight: 2
             {{ post.excerpt }}
           </div>
         </li>
+      {% endunless %}
       {% endfor %}
     </ul>
   </div>
@@ -33,10 +35,10 @@ navigation_weight: 2
 <div class="wrp-page-content ideas-footer">
   <div class="page-content">
     <p class="outlink-icon">
-      <a href="https://dribbble.com/nevermike" class="popblock"><img src="{{ site.baseurl }}/assets/images/dribbble.svg" alt=""></a>
+      <a href="https://medium.com/@nevermike" class="popblock"><img src="{{ site.baseurl }}/assets/images/medium.svg" alt=""></a>
     </p>
     <p class="outlink-icon">
-      <a href="https://dribbble.com/nevermike">Follow me on Dribbble</a>
+      <a href="https://medium.com/@nevermike">Follow me on Medium</a>
     </p>
   </div>
 </div>
