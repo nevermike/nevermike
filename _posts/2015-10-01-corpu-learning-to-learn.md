@@ -1,7 +1,7 @@
 ---
 layout: work
 title:  "CorpU, Learning to Learn"
-excerpt: A service for people to share connections, information, and expertise with in their trusted networks of colleagues and friends
+excerpt: <p>A service for people to share connections, information, and expertise with in their trusted networks of colleagues and friends</p>
 date:   2017-03-16
 categories: work
 image: cover-intronet.jpg

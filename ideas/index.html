@@ -21,9 +21,14 @@ navigation_weight: 3
             <a href="{{ post.url }}" class="popblock"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
           </div>
           <div class="ideas__list__copy">
-          <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
             {{ post.excerpt }}
+
+            <div class="btn">
+              <p><a href="{{ post.url }}">Explore Idea</a></p>
+            </div>
+
           </div>
         </li>
       {% endunless %}

@@ -2,6 +2,7 @@
 
 // font varibale
 $body-font: 'Inconsolata', monospace;
+$body-font-alt: 'Slabo 27px', serif;
 $headline-font: 'Hind', Helvetica, sans-serif;
 $text-transform: uppercase;
 
@@ -23,7 +24,7 @@ $browser-context: 16; //sets base font size
 // specs
 
 body {
-  font-family: $body-font;
+  font-family: $body-font-alt;
   font-size: em(24);
   font-weight: 400;
   line-height: 1.4;
