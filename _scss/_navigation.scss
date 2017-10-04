@@ -1,0 +1,101 @@
+// navigation.scss
+
+.wrp-header {
+
+  @include bp(phony) {
+    padding: .5em 0 1em 0;
+  };
+  @include bp(tablish) {
+    padding: 1em 2em;
+  };
+  @include bp(screeny) {
+    padding: 1em 4em;
+  };
+}
+
+.site-header {
+
+  @include bp(phony) {
+    margin: auto;
+    width: 96%;
+  };
+  @include bp(tablish) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  };
+}
+.logo {
+  max-width: 6.33em;
+  align-self: center;
+
+  @include bp(phony) {
+    margin: auto;
+  };
+}
+
+.logo-home {
+  display: block;
+  @include transition-regular;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.site-nav {
+  align-self: center;
+
+  ul {
+    display: flex;
+
+    margin: 1em 0 0;
+    padding: 0;
+
+    @include bp(phony) {
+      justify-content: space-between;
+    };
+    @include bp(tablish) {
+      justify-content: flex-end;
+    };
+  }
+  li {
+    margin-top: 0;
+
+    @include bp(phony) {
+      flex-shrink: 0;
+      width: 33%;
+      text-align: center;
+    };
+
+    +li {
+      
+      @include bp(tablish) {
+        margin-left: 2em;
+      };
+    }
+  }
+
+  a {
+    padding: 1em 1em 0 1em;
+    text-decoration: none;
+    border-bottom: .125em solid transparent;
+    @include transition-regular;
+
+    @include bp(phony) {
+      display: block;
+      padding: 1em 1em .5em;
+    };
+
+    &:hover {
+      border-bottom: .125em solid $c-prime;
+    }
+
+    &:visited {
+      color: $c-prime;
+    }
+
+    &.active {
+      border-bottom: .125em solid $c-pink;
+    }
+  }
+}

@@ -1,118 +1,285 @@
 // header
 
 .wrp-header {
-  position: relative;
-  width: 100%;
   background: $c-purple-tint;
-  transform: skewY(-1.5deg);
 
-  @include bp(tablish) {
-    padding: 1em 0;
+  @include bp(phony) {
+    padding: 1rem;
+    box-shadow: 0 .125rem .125rem rgba($c-black, .25);
   };
 
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: " ";
-    width: 100%;
-    height: 1em;
-    background: $c-purple-tint;
-    transform: skewY(1.5deg);
-  }
+  @include bp(tablish) {
+    padding: 2rem;
+    box-shadow: 0 .125rem .125rem rgba($c-black, .25);
+  };
+
+  @include bp(screeny) {
+    padding: 4rem;
+    box-shadow: .125rem 0 .125rem rgba($c-black, .25);
+  };
 }
 
 .site-header {
-  transform: skewY(1.5deg);
+  display: flex;
 
   @include bp(phony) {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto 1em;
-    padding: 1em 0;
-    width: 80%;
+
+    margin: auto;
+    width: 96%;
   };
 
   @include bp(tablish) {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
-    width: 70%;
-    max-width: 52em;
-  };
-}
 
-.logo {
-  width: 3em;
+    margin: auto;
+    width: 94%;
+  };
+
+  .logo {
+    background: yellow;
+
+    @include bp(phony) {
+      width: 50%;
+    };
+
+    @include bp(tablish) {
+      width: 15%;
+    };
+
+    .holder {
+
+      @include bp(phony) {
+        max-width: 4em;
+      };
+    }
+  }
+
+  .site-nav {
+    background: pink;
+
+    @include bp(phony) {
+      width: 50%;
+      text-align: center;
+    };
+    @include bp(tablish) {
+      width: 60%;
+    };
+
+    ul {
+
+      @include bp(tablish) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      };
+    }
+
+    li {
+
+      +li {
+
+        @include bp(phony) {
+          margin-top: .5em;
+        };
+      }
+    }
+  }
 }
 
 .site-nav {
 
-  ul {
-    display: flex;
-
-    @include bp(phony) {
-      justify-content: center;
-      margin: auto;
-    };
-  }
-
-  li {
-
-    +li {
-      margin: 0 0 0 2em;
-    }
-
-    &:before {
-      content: "";
-      margin: 0;
-      padding: 0;
-    }
-  }
-
   a {
-    display: block;
-    padding: .5em 1em;
+    display: inline-block;
+    font-family: $headline-font;
     text-transform: $text-transform;
     font-weight: 700;
 
-    &:hover {
-      color: $c-black;
-      border-bottom-color: $c-black;
-    }
+    @include bp(phony) {
+      font-size: larger;
+    };
 
     &.active {
       color: $c-black;
-      border-bottom-color: $c-black;
     }
-
-    @include bp(phony) {
-      font-size: large;
-    };
   }
 }
 
-//  header fun
-
-// .page-header {
-//   position: fixed;
-//   left:0; top:0; width:100%;
-//   box-sizing:border-box;
-//
-//   transition: top 0.6s;
-//
-// }
-//
-// .page-header.off-canvas {
+// .site-header {
+//   display: flex;
 //
 //   @include bp(phony) {
-//     top: -10em;
+//     justify-content: center;
+//     align-items: center;
+//
+//     margin: auto;
+//     width: 96%;
 //   };
-//   // top: -6em;
+//
+//   @include bp(tablish) {
+//     justify-content: space-between;
+//     align-items: center;
+//
+//     margin: auto;
+//     width: 94%;
+//   };
 // }
-// .page-header.fixed {
-//   top:0;
-// 	z-index: 9999;
+//
+// .logo {
+//
+//   @include bp(phony) {
+//     margin: auto;
+//     width: 30%;
+//     max-width: 5.25rem;
+//   };
+//
+//   @include bp(tablish) {
+//     width: 8%;
+//   };
+// }
+// .site-nav {
+//
+//   @include bp(phony) {
+//     width: 65%;
+//     text-align: center;
+//   };
+//
+//   ul {
+//     display: flex;
+//
+//     @include bp(phony) {
+//       flex-direction: column;
+//       justify-content: flex-end;
+//     };
+//
+//     li {
+//       margin: 0;
+//       border: 1px solid red;
+//
+//       +li {
+//
+//         @include bp(phony) {
+//           margin-top: 1em;
+//         };
+//
+//         @include bp(tablish) {
+//           margin-left: 2em;
+//         };
+//       }
+//
+//       a {
+//         font-size: 1.5rem;
+//         font-family: $headline-font;
+//         font-weight: 700;
+//         text-transform: $text-transform;
+//
+//         &:hover {
+//           color: $c-black;
+//         }
+//
+//         &.active {
+//           color: $c-black;
+//           border-bottom: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+//
+// .wrp-header {
+//   position: relative;
+//   width: 100%;
+//   background: $c-purple-tint;
+//   transform: skewY(-1.5deg);
+//
+//   @include bp(tablish) {
+//     padding: 1em 0;
+//   };
+//
+//   &:before {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     content: " ";
+//     width: 100%;
+//     height: 1em;
+//     background: $c-purple-tint;
+//     transform: skewY(1.5deg);
+//   }
+// }
+//
+// .site-header {
+//   transform: skewY(1.5deg);
+//
+//   @include bp(phony) {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin: 0 auto 1em;
+//     padding: 1em 0;
+//     width: 80%;
+//   };
+//
+//   @include bp(tablish) {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin: auto;
+//     width: 70%;
+//     max-width: 52em;
+//   };
+// }
+//
+// .logo {
+//   width: 3em;
+// }
+//
+// .site-nav {
+//
+//   ul {
+//     display: flex;
+//
+//     @include bp(phony) {
+//       justify-content: center;
+//       margin: auto;
+//     };
+//   }
+//
+//   li {
+//
+//     +li {
+//       margin: 0 0 0 2em;
+//     }
+//
+//     &:before {
+//       content: "";
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+//
+//   a {
+//     display: block;
+//     padding: .5em 1em;
+//     font-family: $headline-font;
+//     text-transform: $text-transform;
+//     font-weight: 700;
+//
+//     &:hover {
+//       color: $c-black;
+//       border-bottom-color: $c-black;
+//     }
+//
+//     &.active {
+//       color: $c-black;
+//       border-bottom-color: $c-black;
+//     }
+//
+//     @include bp(phony) {
+//       font-size: large;
+//     };
+//   }
 // }

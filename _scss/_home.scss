@@ -1,104 +1,69 @@
-// home
+// home.scss
 
-.home {
-  background: $c-purple-tint;
-}
+.page-content {
 
-.homeintro {
-  text-align: center;
-
-  h1 {
-    font-family: $body-font;
-    text-transform: none;
-    font-weight: 400;
+  .intro {
+    margin: auto;
+    width: 75%;
   }
-}
 
-.whereyouat {
+  .navigationblock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
 
-  @include bp(phony) {
-    padding-bottom: 2em;
-  };
+    @include bp(phony) {
+      flex-direction: column;
+    };
 
-  @include bp(tablish) {
-    padding-bottom: 4em;
-  };
+    @include bp(tablish) {
+      flex-direction: column;
+    };
 
-  nav {
+    @include bp(screeny) {
+      flex-direction: row;
+    };
 
-    ul {
+    &__item {
+      position: relative;
+      border-top: .5em solid $c-granet;
 
-      @include bp(phony) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      };
+      a {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url( "../../assets/images/arrow_forward.png" ) no-repeat 95% .5em;
+        background-size: 2em;
+        opacity: 0;
 
-      @include bp(tablish) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-      };
-
-      @include bp(screeny) {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: auto;
-      };
-    }
-
-    li {
-      flex-grow: 0;
-
-      &:before {
-        margin: 0;
-        padding: 0;
+        &:hover {
+          border-color: transparent;
+          background: url( "../../assets/images/arrow_forward.png" ) no-repeat 95% .5em;
+          background-size: 2em;
+          opacity: 1;
+        }
       }
 
       @include bp(phony) {
-        flex-basis: 8em;
-        margin: .5em;
-
-        &.at {
-          flex-basis: 100%;
-          // margin-bottom: -1em;
-          text-align: center;
-
-          img {
-            width: 3em;
-          }
+        +.navigationblock__item {
+          margin-top: 2em;
         }
       };
 
       @include bp(tablish) {
-        flex-basis: 8em;
-        margin: 1em;
-
-        &.at {
-          flex-basis: 100%;
-          margin-bottom: -2em;
-          text-align: center;
-
-          img {
-            width: 8em;
-          }
+        +.navigationblock__item {
+          margin-top: 2em;
         }
       };
 
       @include bp(screeny) {
-        flex-basis: 5em;
+        width: calc(100% / 3);
 
-        &.at {
-          flex-basis: 5em;
-          margin-bottom: 1em;
-          text-align: center;
-
-          img {
-            width: 5em;
-          }
+        +.navigationblock__item {
+          margin: 0 0 0 2em;
         }
       };
     }

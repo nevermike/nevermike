@@ -1,10 +1,9 @@
 // type.scss
 
 // font varibale
-$body-font: 'Inconsolata', monospace;
-$body-font-alt: 'Slabo 27px', serif;
-$headline-font: 'Hind', Helvetica, sans-serif;
-$text-transform: uppercase;
+$body-font: 'Hind', sans-serif;
+$subheadline-font: 'lora', serif;
+$headline-font: 'Montserrat', sans-serif;
 
 // sizing
 
@@ -24,75 +23,73 @@ $browser-context: 16; //sets base font size
 // specs
 
 body {
-  font-family: $body-font-alt;
-  font-size: em(24);
+  font-family: $body-font;
+  font-size: em(18);
   font-weight: 400;
   line-height: 1.4;
-  color: $c-slate;
-  background: $color-white;
+  color: $c-black;
+  background: $c-white;
 
   @include bp(phony) {
     font-size: em(16);
   };
 }
 
-a {
-  text-decoration: none;
-  color: $c-prime;
-  border-bottom: .125em solid transparent;
-  @include transition-regular;
+.wrp-page-content, .contact {
+  a {
+    text-decoration: none;
+    color: $c-prime;
+    border-bottom: .125em solid transparent;
+    @include transition-regular;
 
-  &:hover {
-    border-bottom: .125em solid $c-prime;
+    &:hover {
+      border-bottom: .125em solid $c-prime;
+    }
   }
 }
 
 p {
   margin: 1.5em 0 0;
-  // font-size: em(16);
   font-weight: 400;
   line-height: 1.6;
 }
 
 h1 {
   margin: 1em 0 0;
-  font-size: em(32);
+  font-size: em(60.75);
   font-family: $headline-font;
-  font-weight: 700;
-	text-transform: $text-transform;
+  font-weight: 800;
   line-height: 1.3;
-  color: $c-brown;
+  color: $c-slate;
 
   @include bp(phony) {
-    font-size: em(28);
+    font-size: em(48.6);
   };
 }
 
 h2 {
   margin: .825em 0 0;
-  font-size: em(28);
-  font-family: $headline-font;
-  font-weight: 700;
-	text-transform: $text-transform;
+  font-size: em(40.5);
+  font-family: $subheadline-font;
+  font-weight: 400;
   line-height: 1.3;
-  color: $c-brown;
+  color: $c-pink;
 
   @include bp(phony) {
-    font-size: em(24);
+    font-size: em(32.4);
   };
 }
 
 h3 {
   margin: .825em 0 0;
-  font-size: em(24);
+  font-size: em(27);
   font-family: $body-font;
   font-weight: 500;
-	text-transform: $text-transform;
   line-height: 1.3;
-  color: $c-brown-shade;
+  color: $c-granet;
 
   @include bp(phony) {
-    font-size: em(22);
+    font-size: em(21.6);
   };
 }
 
@@ -100,24 +97,23 @@ h4 {
   margin-top: .825em 0 0;
   font-size: em(18);
   font-family: $body-font;
-  font-weight: 700;
-	text-transform: $text-transform;
+  font-weight: 500;
   line-height: 1.3;
-  color: $c-brown-shade;
+  color: $c-slate;
 
   @include bp(phony) {
     font-size: em(16);
   };
 }
 
+
 h5 {
   margin: .825em 0 0;
   font-size: em(16);
   font-family: $body-font;
   font-weight: 700;
-	text-transform: $text-transform;
   line-height: 1.3;
-  color: $c-prime;
+  color: $c-slate;
 
   @include bp(phony) {
     font-size: em(14);
@@ -127,12 +123,12 @@ h5 {
 ul, ol {
   margin: 1.5em 0 0 2em;
   padding: 0;
-  font-size: em(16);
+  font-size: em(18);
   font-weight: 400;
   line-height: 1.6;
 
   @include bp(phony) {
-    font-size: em(14);
+    font-size: em(16);
   };
 
   li {
@@ -144,31 +140,6 @@ ul, ol {
   }
 }
 
-ul {
-  li {
-
-    &:before {
-      content: "\2022";
-      margin-right: 1em;
-      font-weight: bold;
-      color: $c-purple-shade;
-    }
-  }
-}
-
-ol {
-  li {
-    counter-increment: li;
-
-    &:before {
-      content: counter(li);
-      margin-right: 1em;
-      font-weight: bold;
-      color: $c-purple-shade;
-    }
-  }
-}
-
 h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child,
 p:first-child,ol:first-child,ul:first-child,dl:first-child {
   margin-top: 0;
@@ -176,10 +147,5 @@ p:first-child,ol:first-child,ul:first-child,dl:first-child {
 
 hr {
   border: none;
-  border-top: .1em solid $c-purple-shade;
-}
-
-.note {
-  font-size: smaller;
-  color: $c-slate;
+  border-top: .1em solid $c-purp;
 }

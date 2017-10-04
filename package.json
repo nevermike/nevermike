@@ -1,5 +1,5 @@
 {
-  "name": "jekyll-gulp-boilerplate",
+  "name": "nevermike",
   "version": "0.0.1",
   "description": "A boilerplate project including full setup for Jekyll, GulpJS, SASS, PostCSS, BrowserSync, Autoprefixer and deploy to GitHub Pages using Gulp.",
   "main": "gulpfile.js",
@@ -16,12 +16,13 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-install": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/esausilva/jekyll-gulp-boilerplate.git"
+    "url": "git+https://github.com/esausilva/jekyll-gulp-boilerplate.git"
   },
   "keywords": [
     "jekyll",

@@ -2,18 +2,18 @@
 layout: base
 ---
 
-<div class="wrp-post-content">
-  <article class="post-content">
+<div class="wrp-page-content">
+  <div class="page-content wrp-post">
 
-    {{ content }}
+    <header class="post-header">
+      <div class="post-header__img">
+        <img src="{{ site.baseurl }}/assets/images/ideas/{{ page.image }}">
+      </div>
+      <h1 class="post-header__title">{{ page.title }}</h1>
+    </header>
 
-  </article>
-</div>
-
-<div class="wrp-page-content ideas-footer">
-  <div class="page-content">
-    <p class="outlink-icon">
-      <a href="{{ site.baseurl }}/work/">More Ideas</a>
-    </p>
+    <div class="post-content">
+      {{ content }}
+    </div>
   </div>
 </div>

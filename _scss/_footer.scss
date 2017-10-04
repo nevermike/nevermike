@@ -1,35 +1,138 @@
 // footer
 
 .wrp-site-footer {
-  border-top: .0625em solid $c-purple-shade;
+  background: $c-black;
 
-  @include bp(phony) {
-    padding: 2em 0 4em;
-  };
+    @include bp(phony) {
+      margin-top: 2em;
+      padding-bottom: 2em;
+    };
+    @include bp(tablish) {
+      margin-top: 3em;
+      padding-bottom: 3em;
+    };
+    @include bp(screeny) {
+      margin-top: 4em;
+      padding-bottom: 4em;
+    };
+}
+
+.signoff {
+  // background: $c-granet;
 
   @include bp(tablish) {
-    padding: 4em 0 6em;
+    display: flex;
+    align-items: stretch;
   };
 }
 
-.site-footer {
-  font-size: smaller;
+.elsewhere {
+  background: $c-purp;
 
   @include bp(phony) {
-    margin: auto;
-    width: 80%;
+    padding: 2em;
   };
-
   @include bp(tablish) {
-    margin: auto;
-    width: 70%;
-    max-width: 52em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3em;
+    width: 50%;
+  };
+  @include bp(screeny) {
+    padding: 4em;
   };
 
-  h4 {
-    text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+
+    @include bp(tablish) {
+      flex-direction: column;
+    };
+    @include bp(screeny) {
+      flex-direction: row;
+    };
   }
-  p {
-    color: $c-slate;
+
+  li {
+    +li {
+
+      @include bp(phony) {
+        margin-left: 2em;
+      };
+      @include bp(tablish) {
+        margin-top: 1em;
+      };
+      @include bp(screeny) {
+        margin: 0 0 0 2em;
+      };
+    }
   }
+
+  @include bp(phony) {
+    a {
+      min-width: 4em;
+    }
+  };
+  @include bp(tablish) {
+    a {
+      min-width: 4em;
+      width: 80%;
+      max-width: 6em;
+    }
+  };
+}
+
+.contact {
+  color: $c-white;
+  background: $c-granet;
+
+  @include bp(phony) {
+    padding: 2em;
+  };
+  @include bp(tablish) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3em;
+    width: 50%;
+  };
+  @include bp(screeny) {
+    padding: 4em;
+  };
+
+  .footer-email {
+    display: inline-block;
+    padding: .15em .25em 0 .25em;
+    color: $c-pink;
+    // border: .125em solid $c-pink;
+    background: lighten($c-pink, 25%);
+
+    &:hover {
+      color: lighten($c-pink, 25%);
+      // border: .125em solid $c-pink;
+      // border-color: $c-pink;
+      background: $c-pink;
+    }
+  }
+}
+
+.site-footer {
+  color: $c-slate;
+  text-align: center;
+
+  @include bp(phony) {
+    padding-top: 2em;
+  };
+  @include bp(tablish) {
+    padding-top: 3em;
+  };
+  @include bp(screeny) {
+    padding-top: 4em;
+  };
 }

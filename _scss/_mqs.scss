@@ -10,11 +10,8 @@
   @else if $point == tablish {
     @media (min-width: 43.75em)  { @content; };
   }
-  // @else if $point == fatphony {
-  //   @media (min-width: 30.0625em)  { @content; };
-  // }
   @else if $point == phony {
-    @media (max-width: 43.6875em)  { @content; };
+    @media (max-width: 43.74em)  { @content; };
   }
   @else if $point == highdpi {
     @media (min-width: 64em) and (-webkit-min-device-pixel-ratio: 1.3),

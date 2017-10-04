@@ -1,0 +1,74 @@
+// experience
+
+// Selected Roles
+
+.selected-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.74rem,1fr));
+  grid-gap: 2rem;
+  margin-top: .825em;
+
+  &__item {
+    * {
+      margin: 0;
+    }
+  }
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6em,1fr));
+  grid-gap: 2em;
+  align-items: center;
+  margin-top: .825em;
+}
+
+.aboutme {
+
+  p {
+    font-size: 1.15em;
+    text-shadow: 0 -1px 0 rgba($c-white, .5);
+  }
+}
+
+.me-little {
+  position: relative;
+
+  &:before {
+    z-index: -1;
+    position: absolute;
+    top: -1.5em;
+    left: -3em;
+    content: " ";
+    display: block;
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+    background: url(../../assets/images/me-little.png) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: .5;
+    transform: rotate(-11deg);
+    box-shadow: 1em 2em 0 $c-pink;
+  }
+}
+
+.me-artschool {
+  position: relative;
+
+  &:before {
+    z-index: -1;
+    position: absolute;
+    top: 2em;
+    right: -2em;
+    content: " ";
+    display: block;
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+    background: url(../../assets/images/me-artschool.png) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: .5;
+    transform: rotate(6deg);
+    box-shadow: -2em -1em 0 $c-slate;
+  }
+}

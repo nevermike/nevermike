@@ -3,80 +3,79 @@
 .ideas {
 
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+     list-style: none;
+     margin: 0;
+     padding: 0;
 
-    li {
+     li {
+       display: flex;
+       align-items: center;
 
       @include bp(phony) {
-        border: .25em solid white;
-        box-shadow: 0 0 1em rgba($c-black, .25);
-
-        +li {
-          margin-top: 4em;
-        }
-      };
-
-      @include bp(tablish) {
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-        +li {
-          margin-top: 3em;
-        }
+        background: $c-white;
+        box-shadow: 0 0 1em rgba($c-black, .25);
       };
-
+      @include bp(tablish) {
+        flex-direction: column;
+        background: $c-white;
+        box-shadow: 0 0 1em rgba($c-black, .25);
+      };
       @include bp(screeny) {
         flex-direction: row;
+        background: $c-white;
+        box-shadow: none;
       };
 
-      &:before {
-        content: "";
-        margin: 0;
-        padding: 0;
+      +li {
+
+        @include bp(phony) {
+          margin-top: 3em;
+        };
+        @include bp(tablish) {
+          margin-top: 3em;
+        };
+        @include bp(screeny) {
+          margin-top: 4em;
+        };
       }
-    }
+     }
 
-    &__img {
+     &__img {
+       flex-shrink: 0;
 
-      @include bp(tablish) {
-        margin: auto;
-        border: .25em solid white;
-        box-shadow: 0 0 1em rgba($c-black, .25);
-      };
-      @include bp(screeny) {
-        flex-basis: 20%;
-      };
-    }
+        @include bp(phony) {
+          padding: .5em
+        };
+        @include bp(tablish) {
+          padding: 1em
+        };
+         @include bp(screeny) {
+           margin-right: calc(100% * 1/24);
+           width: calc(100% * 1/3);
+         };
 
-    &__copy {
+         img {
 
-      @include bp(phony) {
-        padding: 2em 1em;
-      };
-      @include bp(tablish) {
-        padding: 2em;
-      };
-      @include bp(screeny) {
-        flex-basis: 70%;
-        padding: 0;
-      };
-    }
-  }
-}
+           @include bp(screeny) {
+             border-radius: 1em;
+           };
+         }
+     }
 
-.ideas-footer {
-  background: $c-purple-tint;
-}
+     &__copy {
 
-.outlink-icon {
-  margin: 0 auto;
-  text-align: center;
+       a {
+         display: block;
+       }
 
-  img {
-    width: 4em;
-  }
+       @include bp(phony) {
+         font-size: smaller;
+         padding: 0 1em 1em;
+       };
+       @include bp(tablish) {
+         padding: 0 1em 1em;
+       };
+     }
+   }
 }

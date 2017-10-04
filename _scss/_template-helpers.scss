@@ -1,9 +1,5 @@
 // template helpers
 
-body {
-  animation: fadeinpage 1.3s 1;
-}
-
 .greeting {
 
   &.ideas, &.work {
@@ -14,111 +10,54 @@ body {
 
 .wrp-page-content {
 
-  @include bp(phony) {
-    padding: 2em 0;
-  }
+  +.wrp-page-content {
 
-  @include bp(tablish) {
-    padding: 4em 0;
-  };
-
-  &--0 {
-    padding: 0;
+    @include bp(phony) {
+      margin-top: 2em;
+    };
+    @include bp(tablish) {
+      margin-top: 3em;
+    };
+    @include bp(screeny) {
+      margin-top: 4em;
+    };
   }
 }
 
 .page-content {
-
-  @include bp(phony) {
-    margin: auto;
-    width: 80%;
-  };
-
-  @include bp(tablish) {
-    margin: auto;
-    width: 80%;
-    max-width: 28em;
-  };
-  @include bp(screeny) {
-    margin: auto;
-    width: 70%;
-    max-width: 52em;
-  };
-}
-
-
-// posts layout
-
-.wrp-post-content {
-
-  @include bp(phony) {
-    padding: 2em 0;
-  }
-
-  @include bp(tablish) {
-    padding: 4em 0;
-  };
-}
-
-.post-content > *:not(img) {
-
-  @include bp(phony) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  };
-  @include bp(tablish) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    max-width: 28em;
-  };
-  @include bp(screeny) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    max-width: 52em;
-  };
-}
-
-.standard-image {
-  display: block;
   margin: auto;
-  width: 50%;
 
   @include bp(phony) {
-    margin: 2em auto;
-  };
-  @include bp(tablish) {
-    margin: 4em auto;
-    max-width: 52em;
-  };
-  @include bp(screeny) {
-    max-width: 72em;
-  };
-
-  &:first-child {
-    margin-top: 0;
+    width: 96%;
   }
+
+  @include bp(tablish) {
+    width: 85%;
+    max-width: 66em;
+  };
 }
 
-.feature-image {
-  display: block;
-  margin: auto;
-  width: 100%;
+.section-header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  background: $c-white;
+}
+
+.intro-p {
+  font-weight: bold;
+  // background: linear-gradient(32deg, rgba($c-pink, .5), $c-purp, rgba($c-prime, .25), $c-purp, rgba($c-pink, .5));
+  background: linear-gradient(0deg, rgba($c-pink, .15) 0%, rgba($c-prime, .25) 100%);
+
 
   @include bp(phony) {
-    margin: 2em auto;
+    padding: 1em;
+    font-size: 1.5em;
+    text-shadow: 0 -1px 0 rgba($c-white, .5);
   };
   @include bp(tablish) {
-    margin: 4em auto;
-    max-width: 52em;
+    padding: 2em;
+    font-size: 1.5em;
+    text-shadow: 0 -1px 0 rgba($c-white, .5);
   };
-  @include bp(screeny) {
-    max-width: 72em;
-  };
-
-  &:first-child {
-    margin-top: 0;
-  }
 }

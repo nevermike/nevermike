@@ -1,10 +1,10 @@
-<header class="outer page-header">
 <div class="wrp-header">
   <header class="site-header">
-    <div class="logo">
-      {% include logo.html %}
+    <div class="logo animated swing">
+      <a href="/" class="popit"><img src="{{ site.baseurl }}/assets/images/me.png" alt=""></a>
     </div>
-    <nav class="site-nav">
+
+    <div class="site-nav">
       <ul>
         {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
           {% for p in navigation_pages %}
@@ -17,7 +17,6 @@
             {% endif %}
           {% endfor %}
       </ul>
-    </nav>
+    </div>
   </header>
 </div>
-</header>

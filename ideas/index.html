@@ -1,13 +1,13 @@
 ---
 layout: base
 title: Ideas
-canonical: https://nevermike.com/writing/index.html
+canonical: https://nevermike.com/ideas/index.html
 navigation_weight: 3
 ---
 
-<div class="wrp-greeting">
-  <div class="greeting ideas">
-    💡✍️💭
+<div class="wrp-page-content ">
+  <div class="page-content">
+    <h1>Ideas</h1>
   </div>
 </div>
 
@@ -18,32 +18,15 @@ navigation_weight: 3
       {% unless post.categories contains 'work' %}
         <li>
           <div class="ideas__list__img">
-            <a href="{{ post.url }}" class="popblock"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
+            <a href="{{ post.url }}" class="popit"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
           </div>
           <div class="ideas__list__copy">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-
-            {{ post.excerpt }}
-
-            <div class="btn">
-              <p><a href="{{ post.url }}">Explore Idea</a></p>
-            </div>
-
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          {{ post.excerpt }}
           </div>
         </li>
       {% endunless %}
       {% endfor %}
     </ul>
-  </div>
-</div>
-
-<div class="wrp-page-content ideas-footer">
-  <div class="page-content">
-    <p class="outlink-icon">
-      <a href="https://medium.com/@nevermike" class="popblock"><img src="{{ site.baseurl }}/assets/images/medium.svg" alt=""></a>
-    </p>
-    <p class="outlink-icon">
-      <a href="https://medium.com/@nevermike">Follow me on Medium</a>
-    </p>
   </div>
 </div>
