@@ -31,44 +31,67 @@
   }
 }
 
-.me-little {
-  position: relative;
+  .me-little {
 
-  &:before {
-    z-index: -1;
-    position: absolute;
-    top: -1.5em;
-    left: -3em;
-    content: " ";
-    display: block;
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-    background: url(../../assets/images/me-little.png) no-repeat 50% 50%;
-    background-size: cover;
-    opacity: .5;
-    transform: rotate(-11deg);
-    box-shadow: 1em 2em 0 $c-pink;
+    img {
+      float: left;
+      margin: 0 1em 1em 0;
+      width: 6em;
+      transform: rotate(2deg);
+      box-shadow: 0 1em 2em rgba($c-black, .25);
+    }
   }
-}
 
-.me-artschool {
-  position: relative;
+  .me-artschool {
 
-  &:before {
-    z-index: -1;
-    position: absolute;
-    top: 2em;
-    right: -2em;
-    content: " ";
-    display: block;
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-    background: url(../../assets/images/me-artschool.png) no-repeat 50% 50%;
-    background-size: cover;
-    opacity: .5;
-    transform: rotate(6deg);
-    box-shadow: -2em -1em 0 $c-slate;
+    img {
+      float: right;
+      margin: 0 1em 1em;
+      width: 6em;
+      transform: rotate(-4deg);
+      box-shadow: 0 1em 2em rgba($c-black, .25);
+    }
   }
-}
+
+// .me-little {
+//   z-index: 2; // fix me
+//   position: relative;
+//
+//   &:before {
+//     z-index: 1;
+//     position: absolute;
+//     top: -1.5em;
+//     left: -3em;
+//     content: " ";
+//     display: block;
+//     width: 10em;
+//     height: 10em;
+//     border-radius: 100%;
+//     background: url(../../assets/images/me-little.png) no-repeat 50% 50%;
+//     background-size: cover;
+//     opacity: .5;
+//     transform: rotate(-11deg);
+//     box-shadow: 1em 2em 0 $c-pink;
+//   }
+// }
+//
+// .me-artschool {
+//   position: relative;
+//
+//   &:before {
+//     z-index: -1;
+//     position: absolute;
+//     top: 2em;
+//     right: -2em;
+//     content: " ";
+//     display: block;
+//     width: 10em;
+//     height: 10em;
+//     border-radius: 100%;
+//     background: url(../../assets/images/me-artschool.png) no-repeat 50% 50%;
+//     background-size: cover;
+//     opacity: .5;
+//     transform: rotate(6deg);
+//     box-shadow: -2em -1em 0 $c-slate;
+//   }
+// }

@@ -73,8 +73,8 @@
 }
 
 .title-space {
-  padding-top: 1.5em;
-}
-.revert-title-space {
-  padding-top: 0;
+
+  @include bp(phony) {
+    padding-top: 1.5em;
+  };
 }

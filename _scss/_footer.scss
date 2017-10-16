@@ -1,18 +1,14 @@
 // footer
 
 .wrp-site-footer {
-  background: $c-black;
 
     @include bp(phony) {
-      margin-top: 2em;
       padding-bottom: 2em;
     };
     @include bp(tablish) {
-      margin-top: 3em;
       padding-bottom: 3em;
     };
     @include bp(screeny) {
-      margin-top: 4em;
       padding-bottom: 4em;
     };
 }

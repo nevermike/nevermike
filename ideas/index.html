@@ -5,14 +5,10 @@ canonical: https://nevermike.com/ideas/index.html
 navigation_weight: 3
 ---
 
-<div class="wrp-page-content ">
-  <div class="page-content">
-    <h1>Ideas</h1>
-  </div>
-</div>
-
 <div class="wrp-page-content">
   <div class="page-content ideas">
+    <h1 class="section-header">Ideas</h1>
+
     <ul class="ideas__list">
       {% for post in site.posts %}
       {% unless post.categories contains 'work' %}

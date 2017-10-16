@@ -28,11 +28,24 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: $c-black;
-  background: $c-white;
+  background: $c-black;
 
   @include bp(phony) {
     font-size: em(16);
   };
+}
+
+.wrp-site {
+  @include bp(phony) {
+    padding-bottom: 2em;
+  };
+  @include bp(tablish) {
+    padding-bottom: 3em;
+  };
+  @include bp(screeny) {
+    padding-bottom: 4em;
+  };
+  background: $c-white;
 }
 
 .wrp-page-content, .contact {
