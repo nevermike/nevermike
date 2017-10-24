@@ -71,6 +71,7 @@ gulp.task('sass', function () {
  * Watch scss files for changes & recompile
  * Watch html/md/js/image/json files, run jekyll & reload BrowserSync
  */
+
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
     gulp.watch(['./**/*.html', '_data/*.json', 'assets/scripts/*.js', 'assets/images/*.*', './**/*.md'], ['jekyll-rebuild']);

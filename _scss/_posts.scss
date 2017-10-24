@@ -2,6 +2,10 @@
 
 .wrp-post {
 
+  // @include bp(phony) {
+  //   position: relative;
+  // };
+
   @include bp(tablish) {
     display: flex;
     justify-content: space-between;
@@ -11,8 +15,10 @@
 .post-header {
 
   @include bp(phony) {
+    position: relative;
     margin-bottom: 4em;
     text-align: center;
+    overflow: hidden;
   };
 
   @include bp(tablish) {
@@ -28,24 +34,24 @@
       @include transition-regular;
 
       &.scrolled-up {
-        z-index: -1;
-        position: fixed;
+        z-index: 1;
+        position: sticky;
         top: -2em;
         left: 0;
         width: 100%;
         opacity: .25;
         transform: scale(1.5);
 
-        &:after {
-          content: "";
-          z-index: 1;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 115%;
-          background: linear-gradient(0deg, rgba($c-white, 1) 10%, rgba($c-pink, .25) 100%);
-        }
+        // &:after {
+        //   content: "";
+        //   z-index: 1;
+        //   position: sticky;
+        //   top: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 115%;
+        //   background: linear-gradient(0deg, rgba($c-white, 1) 10%, rgba($c-pink, .25) 100%);
+        // }
       }
     };
 
