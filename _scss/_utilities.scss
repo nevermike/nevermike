@@ -5,6 +5,11 @@
   transition: all .2s ease-in;
 }
 
+@mixin card() {
+  border-radius: .25rem;
+  box-shadow: 0 .125rem 1rem rgba($c-dark, .325);
+}
+
 .popit {
   display: block;
   @include transition-regular;

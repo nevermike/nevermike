@@ -5,24 +5,52 @@ canonical: https://nevermike.com/principles/index.html
 navigation_weight: 1
 ---
 
-<div class="wrp-page-content ">
+<div class="wrp-page-content principles">
   <div class="page-content">
     <h1 class="section-header">Principles</h1>
 
-    <p class="intro-p animated bounceInUp">Fight for the user. Support the business. Reduce complexity. Repeat.</p>
-
     <h2>Honesty</h2>
-    <p>I belive in making an honest product. One that stands on its own merrits and doens't rely on dark patterns or SEO trick to get people to look at it.</p>
-    Death to Bullshit
+    <h3>I believe in making an honest product.</h3>
+    <p>One that stands on its own merits and doesn’t rely on dark patterns or SEO tricks to get people to look at it.</p>
 
-    <h2>Inclustion</h2>
-    Designing for people
+    <p>I have no patience for tricks, gimmicks, or gaming the system. I want to present things in their clearest, most honest forms, with as little decoration as possible.</p>
+
+    <p>Devices, abilities, and situations are always part of the conversation. I'm not making something that pretty on my computer... I'm making some that works on yours. That doesn't mean boring design. It means understand and synthesizing lots of aspects and situations, and creating what feels natural for that context.</p>
+
+    <h2>Inclusion</h2>
+    <h3>I believe in designing for people.</h3>
+    <p>All people. Everyone. Our solutions should never make someone feel excluded or less than or not considered. I believe in making things that are good for humans.</p>
+
+    <p>There are no edge cases — there’s people who need to get something done, find information, looking for help or advice or connection. And I want to help them.</p>
 
     <h2>Exploration</h2>
-    why? why why
-
-    <!-- <h2>Why</h2>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/29M_VElHoFI?rel=0" frameborder="0" allowfullscreen></iframe> -->
+    <h3>I believe in exploring options.</h3>
+    <p>My first idea may be the right one or not. By exploring, question our biases, and talking to people, we can design better, more valuable products.</p>
 
   </div>
 </div>
+
+{% if site.categories.principles == null %}
+  {% else %}
+  <div class="wrp-page-content">
+    <div class="page-content">
+      <h4>Things That I've Worked On</h4>
+      <div class="leadin">
+        {% for post in site.categories.principles %}
+          <div class="leadin__item">
+            <div class="leadin__image">
+              <a href="{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
+            </div>
+            <div class="leadin__copy">
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              {{ post.excerpt }}
+              <p><a href="{{ post.url }}" class="button">Read</a></p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <h3 class="text-center">Looking for something else? <a href="{{ site.baseurl }}/ideas">See all Posts</a></h3>
+    </div>
+  </div>
+{% endif %}

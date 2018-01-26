@@ -1,86 +1,32 @@
 // posts
 
-.wrp-post {
-
-  // @include bp(phony) {
-  //   position: relative;
-  // };
-
-  @include bp(tablish) {
-    display: flex;
-    justify-content: space-between;
-  };
-}
-
 .post-header {
 
-  @include bp(phony) {
-    position: relative;
-    margin-bottom: 4em;
-    text-align: center;
-    overflow: hidden;
-  };
-
-  @include bp(tablish) {
-    position: sticky;
-    top: 1em;
-    align-self: flex-start;
-    width: calc(100% * 1 / 3);
-  };
-
-  &__img {
+  &__image {
 
     @include bp(phony) {
-      @include transition-regular;
-
-      &.scrolled-up {
-        z-index: 1;
-        position: sticky;
-        top: -2em;
-        left: 0;
-        width: 100%;
-        opacity: .25;
-        transform: scale(1.5);
-
-        // &:after {
-        //   content: "";
-        //   z-index: 1;
-        //   position: sticky;
-        //   top: 0;
-        //   left: 0;
-        //   width: 100%;
-        //   height: 115%;
-        //   background: linear-gradient(0deg, rgba($c-white, 1) 10%, rgba($c-pink, .25) 100%);
-        // }
-      }
+      margin-top: 2rem;
+      width: 100%;
+      height: 10rem;
+      overflow: hidden;
     };
 
     @include bp(tablish) {
-      img {
-        border-radius: 1em;
-      }
-    };
-  }
-
-  &__title {
-
-    @include bp(tablish) {
-      margin-top: .25em;
-      text-align: center;
+      margin-top: 4rem;
+      width: 100%;
+      height: 20rem;
+      overflow: hidden;
     };
   }
 }
 
 .post-content {
 
-  @include bp(tablish) {
-    width: calc(100% * 7 / 12);
-  };
-}
-
-.title-space {
-
   @include bp(phony) {
-    padding-top: 1.5em;
+    margin-top: 2rem;
+  };
+
+  @include bp(tablish) {
+    margin-top: 4rem;
   };
 }

@@ -1,0 +1,19 @@
+// buttons
+
+.button {
+  display: inline-block;
+  padding: .75rem 1rem .625rem;
+  color: $c-light !important;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none !important;
+  border-radius: .25rem;
+  background: $c-secondary;
+  box-shadow: 0 0 .5rem rgba($c-dark, 0);
+  @include transition-regular;
+
+  &:hover {
+    box-shadow: 0 0 .5rem rgba($c-dark, .325);
+    transform: scale(1.1);
+  }
+}

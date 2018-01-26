@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="footer/site-wide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-821.000000, -42.000000)">
+        <g id="linkedin-copy" transform="translate(811.000000, 32.000000)">
+            <g id="icon-linkedin" transform="translate(3.000000, 3.000000)">
+                <rect id="Rectangle-3" fill="#D8D8D8" opacity="0" x="0" y="0" width="50" height="50"></rect>
+                <path d="M11.7,7.395 C9.32,7.395 7.395,9.32 7.395,11.735 C7.395,14.115 9.32,16.04 11.7,16.04 C14.08,16.04 16.005,14.115 16.005,11.7 C16.005,9.32 14.08,7.395 11.735,7.395 C11.735,7.395 11.7,7.395 11.7,7.395 Z M7.955,42.605 L15.305,42.605 L15.305,19.19 L7.955,19.19 C7.955,19.19 7.955,42.605 7.955,42.605 Z M34.45,18.42 C34.45,18.42 28.64,18 27.17,22.34 L27.17,19.155 L19.82,19.155 L19.82,42.57 L27.17,42.57 L27.17,30.04 C27.17,29.62 27.31,25 31.615,25 C35.64,25 35.395,30.46 35.395,30.46 L35.395,42.535 L42.57,42.535 L42.57,28.955 C42.57,29.025 43.515,18.42 34.45,18.42 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

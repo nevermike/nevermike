@@ -1,55 +1,290 @@
 // template helpers
 
+.wrp-site {
+  padding-bottom: 6rem;
+  background: $c-white;
+}
+
 .wrp-page-content {
+  padding-top: 3rem;
 
   +.wrp-page-content {
-
-    @include bp(phony) {
-      margin-top: 2em;
-    };
-    @include bp(tablish) {
-      margin-top: 3em;
-    };
-    @include bp(screeny) {
-      margin-top: 4em;
-    };
+    margin-top: 4rem;
   }
 }
 
 .page-content {
   margin: auto;
 
+  // @include bp(phony) {
+  //   padding: 0 8.533333333%;
+  // };
+
+  @include bp(tablish) {
+    width: 66.66666667%;
+    max-width: 54rem;
+  };
+
+    h1, h2, h3, h4, h5, h6, p, ol, ul, dl {
+
+      // @include bp(tablish) {
+        margin-right: 8.541666667%;
+        margin-left: 8.541666667%;
+      // };
+    }
+}
+
+.wrp-signoff {
+  border-top: .125rem solid rgba($c-medium-alt2, .25);
+  background: $c-light-alt;
+
   @include bp(phony) {
-    width: 96%;
+    padding: 2rem 0;;
+  };
+
+  @include bp(tablish) {
+    padding: 1rem 0;
+  };
+}
+
+.signoff {
+  margin: auto;
+
+  @include bp(phony) {
+    padding: 0 8.533333333%;
+  };
+
+  @include bp(tablish) {
+    padding: 4rem 0;
+    width: 66.66666667%;
+    max-width: 54rem;
+  };
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul, dl {
+
+    @include bp(tablish) {
+      margin-right: 8.541666667%;
+      margin-left: 8.541666667%;
+    };
+  }
+}
+
+// page specific stylesheet
+
+.principles {
+  background: url(../images/principles/blob-principles.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+
+
+.experience {
+  background: url(../images/experience/blob-experience.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+
+.rolls {
+  display: flex;
+
+  @include bp(phony) {
+    flex-direction: column;
+  };
+
+  @include bp(tablish) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  };
+  @include bp(screeny) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  };
+
+  a {
+    display: block;
+    text-decoration: none;
+    @include card;
+    @include transition-regular;
+
+    @include bp(phony) {
+      margin: 1rem auto 0;
+      padding: 1rem;
+      width: 16rem;
+    };
+
+    @include bp(tablish) {
+      // flex-shrink: 0;
+      margin-top: 1rem;
+      padding: 1rem;
+      width: calc(100% * 1 / 2);
+    };
+
+    @include bp(screeny) {
+      padding: 2rem;
+      width: calc(100% * 1 / 3);
+
+      + a {
+        margin-left: 1rem;
+      }
+    };
+
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+    }
   }
 
-  @include bp(tablish) {
-    width: 85%;
-    max-width: 66em;
-  };
+  h3, p {
+    margin: 0;
+    color: $c-light;
+    text-shadow: 0 0 .5rem rgba($c-dark, .75);
+  }
+
+  &__anexinet {
+    background-image: url(../images/experience/anexinet.png), linear-gradient(45deg, #1E8EE6, #1668A7
+    );
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__intronet {
+    background-image: url(../images/experience/intronet.png), linear-gradient(45deg, #8578EB, #5E55A4
+    );
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__corpu {
+    background-image: url(../images/experience/corp-u.png), linear-gradient(45deg, #2FC500, #228702
+    );
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
-.section-header {
-  z-index: 10;
-  position: sticky;
-  top: 0;
-  background: rgba($c-white, .8);
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem auto 0;
+  // width: 100%;
+
+  div {
+    padding: 1rem .625rem;
+    width: calc(100% * 1 / 3);
+    text-align: center;
+  }
 }
 
-.intro-p {
-  font-weight: bold;
-  // background: linear-gradient(32deg, rgba($c-pink, .5), $c-purp, rgba($c-prime, .25), $c-purp, rgba($c-pink, .5));
-  background: linear-gradient(0deg, rgba($c-pink, .15) 0%, rgba($c-prime, .25) 100%);
+.me-intro {
+  position: relative;
 
+  &:before {
+    content: "";
+    position: absolute;
+    background: url(../images/experience/me-little.png);
+    background-size: cover;
+    opacity: .25;
+    transform: rotate(-2deg);
 
-  @include bp(phony) {
-    padding: 1em;
-    font-size: 1.5em;
-    text-shadow: 0 -1px 0 rgba($c-white, .5);
-  };
-  @include bp(tablish) {
-    padding: 2em;
-    font-size: 1.5em;
-    text-shadow: 0 -1px 0 rgba($c-white, .5);
-  };
+    @include bp(phony) {
+      top: -1rem;
+      left: -1rem;
+      width: 8rem;
+      height: 8rem;
+    };
+
+    @include bp(tablish) {
+      top: 1rem;
+      left: -6rem;
+      width: 8rem;
+      height: 8rem;
+    };
+  }
+}
+
+.me-artschool {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: url(../images/experience/me-artschool.png);
+    background-size: cover;
+    opacity: .25;
+    transform: rotate(2deg);
+
+    @include bp(phony) {
+      right: 0rem;
+      bottom: -4rem;
+      width: 8rem;
+      height: 8rem;
+    };
+
+    @include bp(tablish) {
+      right: -6rem;
+      bottom: -2rem;
+      width: 8rem;
+      height: 8rem;
+    };
+  }
+}
+
+.ideas {
+  background: url(../images/ideas/blob-ideas.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+
+.leadin {
+  margin-top: 4rem;
+
+  &__item {
+
+    @include bp(tablish) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    };
+
+    +.leadin__item {
+      margin-top: 4rem;
+    }
+  }
+
+  &__image {
+
+    @include bp(phony) {
+      overflow: hidden;
+    };
+
+    @include bp(tablish) {
+      flex-shrink: 0;
+      width: calc(100% * 4 / 12);
+      overflow: hidden;
+    };
+
+    img {
+      @include transition-regular;
+    }
+
+    a {
+
+      &:hover img {
+        border-radius: .25rem;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__copy {
+
+    @include bp(phony) {
+      margin-top: 1rem;
+    };
+  }
+
 }

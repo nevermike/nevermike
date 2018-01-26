@@ -5,24 +5,29 @@ canonical: https://nevermike.com/ideas/index.html
 navigation_weight: 3
 ---
 
-<div class="wrp-page-content">
-  <div class="page-content ideas">
+<div class="wrp-page-content ideas">
+  <div class="page-content">
     <h1 class="section-header">Ideas</h1>
 
-    <ul class="ideas__list">
+    <div class="leadin">
+      {% assign psize = site.posts | size %}
+      {% if psize == 0 %}
+        <h3>I'm still thinking&hellip;</h3>
+      {% endif %}
+
       {% for post in site.posts %}
-      {% unless post.categories contains 'work' %}
-        <li>
-          <div class="ideas__list__img">
-            <a href="{{ post.url }}" class="popit"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
+        <div class="leadin__item">
+          <div class="leadin__image">
+            <a href="{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
           </div>
-          <div class="ideas__list__copy">
-          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-          {{ post.excerpt }}
+          <div class="leadin__copy">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}" class="button">Read</a></p>
           </div>
-        </li>
-      {% endunless %}
+        </div>
       {% endfor %}
-    </ul>
+    </div>
+
   </div>
 </div>
