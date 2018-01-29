@@ -31,11 +31,19 @@
 <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/nevermike.png" />
 
 <!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/nevermike.png">
-<meta name="twitter:title" content="{{ pageTitle | trim }}">
+{% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}">
+{% else %}
 <meta name="twitter:description" content="{{ site.description }}">
-<meta name="twitter:creator" content="@nevermike">
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+{% else %}
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/nevermike.png">
+{% endif %}
 
 <!-- Favicons -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/favicon.ico" />
