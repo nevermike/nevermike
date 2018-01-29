@@ -27,8 +27,17 @@
 <meta property="og:url" content="{{ canonicalUrl | trim }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ pageTitle | trim }}" />
+{% if page.summary %}
+<meta property="og:description" content="{{ page.summary }}" />
+{% else %}
 <meta property="og:description" content="{{ site.description }}" />
+{% endif %}
+
+{% if page.image %}
+<meta property="og:image" content="{{ site.url }}/assets/images/ideas/{{ page.image }}" />
+{% else %}
 <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/nevermike.png" />
+{% endif %}
 
 <!-- Twitter Cards -->
 {% if page.summary %}
@@ -39,7 +48,7 @@
 
 {% if page.image %}
 <meta name="twitter:card"  content="summary_large_image">
-<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/ideas/{{ page.image }}">
 {% else %}
 <meta name="twitter:card"  content="summary">
 <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/nevermike.png">
