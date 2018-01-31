@@ -3,7 +3,7 @@
 .wrp-site-footer {
 
     @include bp(phony) {
-      padding-bottom: 2em;
+      padding-bottom: 6em;
     };
     @include bp(tablish) {
       padding-bottom: 4em;

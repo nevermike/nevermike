@@ -12,15 +12,12 @@
 
 // scrolling animations
 
-jQuery('.tourpoint__image').addClass("hidden").viewportChecker({
+// window.onload(alert('hello world!'));
+
+jQuery('.page-content').addClass("hidden").viewportChecker({
     classToAdd: 'visible animated fadeIn',
     offset: 200
    });
-
-jQuery('.tourpoint__copy').addClass("hidden").viewportChecker({
-    classToAdd: 'visible animated bounceInRight',
-     offset: 100
-    });
 
 // other animations
 $('.fadeinload').addClass('animated fadeIn');

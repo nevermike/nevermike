@@ -74,8 +74,20 @@
 .site-nav {
 
   @include bp(phony) {
-    margin: 1rem auto .25rem;
+    // margin: 1rem auto .25rem;
+    // width: 100%;
+
+    // testing new mobile ideas
+    z-index: 200;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 0;
     width: 100%;
+    background: rgba($c-secondary, .85);
+
+    // testing new mobile ideas
+
   };
 
   ul {
@@ -121,6 +133,19 @@
     &.active {
       border-bottom: .225em solid $c-primary;
     }
+
+    @include bp(phony) {
+      padding-top: .5rem;
+      border-bottom: none !important;
+      border-top: .225em solid rgba($c-primary, 0);
+
+      &:hover {
+        border-top: .225em solid rgba($c-medium, .75);
+      }
+      &.active {
+        border-top: .225em solid $c-primary;
+      }
+    };
 
     @include bp(tablish) {
       padding: .5em 1em;

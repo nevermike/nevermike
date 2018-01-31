@@ -16,10 +16,6 @@
 .page-content {
   margin: auto;
 
-  // @include bp(phony) {
-  //   padding: 0 8.533333333%;
-  // };
-
   @include bp(tablish) {
     width: 66.66666667%;
     max-width: 54rem;
