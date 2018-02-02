@@ -254,6 +254,9 @@
   &__image {
 
     @include bp(phony) {
+      margin: auto;
+      width: calc(100% * 3 / 4);
+      height: 10rem;
       overflow: hidden;
     };
 
@@ -280,6 +283,11 @@
 
     @include bp(phony) {
       margin-top: 1rem;
+    };
+
+    @include bp(tablish) {
+      flex-shrink: 0;
+      width: calc(100% * 8 / 12);
     };
   }
 
