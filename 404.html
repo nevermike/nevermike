@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,500|Lora:700i|Montserrat:800" rel="stylesheet">
+
+  <style>
+
+    html {
+      box-sizing: border-box;
+      text-size-adjust:100%;
+      text-rendering:optimizeLegibility;
+      }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+    }
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('../assets/images/404.jpg') no-repeat;
+      background-size: cover;
+      opacity: .5;
+    }
+
+    .content404 {
+      margin: auto;
+      padding: 0 8%;
+      width: 90%;
+      max-width: 52em;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: Montserrat;
+      font-size: 4em;
+      color: white;
+      text-shadow: 0 0 .25em black;
+    }
+    h2 {
+      font-family: lora;
+      color: #FF5181;
+      font-size: 1.825em;
+    }
+    p {
+      font-family: Hind;
+      font-size: 1.5em;
+      color: white;
+      text-shadow: 0 .15em .125em black;
+    }
+    a {
+      display: inline-block;
+      margin: 1em;
+      padding: 1em 1.5em;
+      font-family: Hind;
+      color: white;
+      text-decoration: none;
+      background: #FF5181;
+      border-radius: .25em;
+      box-shadow: 0 0 1em rgba(0,0,0, .5);
+    }
+
+  </style>
+
+  </head>
+  <body>
+
+  <video poster="assets/images/404.jpg" id="background-video" playsinline autoplay muted loop>
+  <source src="assets/images/404.mp4" type="video/webm">
+  <source src="assets/images/404.mp4" type="video/mp4">
+  </video>
+
+  <div class="hold404">
+    <div class="content404">
+      <h1>Hang in There</h1>
+      <p>You either got hold of a bad link or goofed up your typing. Heck, there&rsquo;s even a chance I messed some thing up, but let&rsquo;s not point fingers.</p>
+      <h2>Get back to the action</h2>
+      <div>
+        <a href="https://nevermike.com/">Home</a>
+        <a href="https://nevermike.com/principles/">Principles</a>
+        <a href="https://nevermike.com/experience/">Experience</a>
+        <a href="https://nevermike.com/ideas/">Ideas</a>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
