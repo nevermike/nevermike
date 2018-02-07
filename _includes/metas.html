@@ -19,7 +19,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- SEO Optimization -->
-<meta name="description" content="{{ site.description }}"/>
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+{% endif %}
+
 <link rel="canonical" href="{{ canonicalUrl | trim }}" />
 <title>{{ pageTitle | trim }}</title>
 
@@ -27,10 +32,10 @@
 <meta property="og:url" content="{{ canonicalUrl | trim }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ pageTitle | trim }}" />
-{% if page.summary %}
-<meta property="og:description" content="{{ page.summary }}" />
+{% if page.description %}
+<meta property="og:description" content="{{ page.description }}">
 {% else %}
-<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:description" content="{{ site.description }}">
 {% endif %}
 
 {% if page.image %}
@@ -40,8 +45,8 @@
 {% endif %}
 
 <!-- Twitter Cards -->
-{% if page.summary %}
-<meta name="twitter:description" content="{{ page.summary }}">
+{% if page.description %}
+<meta name="twitter:description" content="{{ page.description }}">
 {% else %}
 <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}

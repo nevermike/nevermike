@@ -9,8 +9,7 @@
 title: Nevermike
 email: michael@nevermike.com
 description: I’m Michael, never Mike — a designer, educator, and strategist working world-wide from Philadelphia
-baseurl: "/project" # the subpath of your site, e.g. /blog
-url: "http://nevermike.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://nevermike.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
