@@ -8,6 +8,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Nevermike
 email: michael@nevermike.com
+name: Nevermike's Ideas
 description: I’m Michael, never Mike — a designer, educator, and strategist working world-wide from Philadelphia
 url: "https://nevermike.com" # the base hostname & protocol for your site, e.g. http://example.com
 
