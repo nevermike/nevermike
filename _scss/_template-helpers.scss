@@ -292,3 +292,49 @@
   }
 
 }
+
+// samples
+
+.work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  &__item {
+
+    @include bp(phony) {
+      margin: 0 0 3rem;
+      width: 75%;
+    };
+    @include bp(tablish) {
+      padding: 1rem;
+      width: calc(100% * .5);
+    };
+    @include bp(screeny) {
+      padding: 1rem;
+      width: calc(100% * 1/3);
+    };
+
+    img {
+      @include card;
+    }
+
+    a {
+      display: block;
+      @include transition-regular;
+
+      &:hover {
+        text-decoration: none;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.samplehero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
