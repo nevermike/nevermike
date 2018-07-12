@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "User Interview Cheatsheet"
+title: "Prototype Testing Cheatsheet"
 description: To get actionable data from a series of interviews, use a structured repeatable process. To get meaning feedback from a person, engage them in conversation.
 date: 2018-07-10
 categories: experience
