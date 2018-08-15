@@ -176,6 +176,16 @@
   }
 }
 
+.me-story {
+  font-family: $handwriting;
+  font-size: 1.25rem;
+  color: $c-dark-alt;
+
+  @include bp(phony) {
+    font-size: 1.5rem;
+  };
+}
+
 .me-intro {
   position: relative;
 
