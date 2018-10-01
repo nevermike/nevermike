@@ -24,13 +24,17 @@
 
 .elsewhere {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0 auto 2rem;
   width: 20rem;
 
   div {
     flex-shrink: 0;
+
+    +div {
+      margin-left: 2rem;
+    }
   }
 
   img {
