@@ -1,0 +1,29 @@
+// hero
+
+.wrp-hero {
+  padding: 4rem;
+  background: linear-gradient(40deg, $c-secondary 0%, rgba($c-primary, 0.5) 40%, rgba($c-primary, 0.5) 60%, $c-secondary 100%) no-repeat 50% 50% / 100% 100%;
+}
+.hero {
+  margin: auto;
+  max-width: 56rem;
+
+  h1 {
+    font-family: $subheadline-font;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: $c-white;
+    text-shadow: -.125rem -.125rem 1rem rgba($c-secondary, .5), .125rem .125rem 5rem rgba($c-secondary, .5), .25rem .25rem 0 rgba($c-primary, .25), .75rem .75rem .5rem rgba($c-primary, .25), 0 1rem 1rem rgba($c-primary, .5);
+
+    @include bp(phony) {
+      font-size: 2.5rem;
+    }
+    @include bp(tablish) {
+      font-size: 3rem;
+    }
+    @include bp(screeny) {
+      font-size: 4.5rem;
+    }
+  }
+}

@@ -7,7 +7,7 @@ categories: experience
 image: interview-7-10.jpg
 ---
 
-To get actionable data from a series of interviews, use a structured repeatable process. To get meaning feedback from a person, engage them in conversation.
+![Hi, Nerds](/assets/images/nevermike.png){:class="img-responsive"}
 
 ## Nuts and bolts
 ### Mapping the discussion

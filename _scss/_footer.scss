@@ -1,57 +1,102 @@
 // footer
 
 .wrp-site-footer {
+  margin-bottom: .5rem;
+  background: $c-dark-alt;
 
-    @include bp(phony) {
-      padding-bottom: 6em;
-    };
-    @include bp(tablish) {
-      padding-bottom: 4em;
-    };
+  @include bp(phony) {
+    padding: 2rem 0 8rem 0;
+    }
+  @include bp(tablish) {
+    padding: 2rem 0;
+    }
 }
 
 .site-footer {
-  color: $c-medium;
-  text-align: center;
 
   @include bp(phony) {
-    padding-top: 2em;
-  };
+    margin: auto;
+    width: calc(100% - 2rem);
+  }
+
   @include bp(tablish) {
-    padding-top: 4em;
-  };
+    margin: auto;
+    width: calc(100% * 3 /4);
+    max-width: 56rem;
+  }
+}
+
+.footer-tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .tag-header {
+    font-family: $handwriting;
+    color: $c-secondary;
+    text-align: center;
+
+    @include bp(phony) {
+      font-size: 3rem;
+    }
+    @include bp(tablish) {
+      font-size: 4rem;
+    }
+  }
+  .tag-subheader {
+    margin-top: -1rem;
+    font-family: $handwriting;
+    color: $c-medium;
+    text-align: center;
+
+    @include bp(phony) {
+      margin-top: -1rem;
+      width: calc(100% * 3 / 4);
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+    @include bp(tablish) {
+      display: grid;
+      font-size: 2rem;
+    }
+  }
 }
 
 .elsewhere {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 2rem;
-  width: 20rem;
+  padding: 1rem;
 
   div {
     flex-shrink: 0;
-
-    +div {
-      margin-left: 2rem;
-    }
   }
 
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
+  div+div {
+    margin-left: 4rem;
   }
 
   a {
     display: block;
-    padding: .325rem;
-    border-radius: .25rem;
-    background: $c-medium;
+    padding: .5rem;
+    border-radius: .5rem;
+    background: $c-secondary;
     @include transition-regular;
 
     &:hover {
-      background: $c-secondary;
-      transform: scale(1.1);
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
     }
   }
+}
+
+.legal {
+  font-size: 1rem;
+  text-align: center;
+  color: rgba($c-white, .15);
 }

@@ -5,52 +5,51 @@ canonical: https://nevermike.com/principles/index.html
 navigation_weight: 1
 ---
 
-<div class="wrp-page-content principles">
+<header class="page-title">
+  <h1>Principles</h1>
+</header>
+
+<div class="wrp-page-content">
   <div class="page-content">
-    <h1 class="section-header">Principles</h1>
 
-    <h2>Honesty</h2>
-    <h3>I believe in making an honest product.</h3>
-    <p>One that stands on its own merits and doesn’t rely on dark patterns or SEO tricks to get people to look at it.</p>
+    <h2 class="blob-1">Honest, inclusive, and little quirky</h2>
+    <h3>I’m happy to help you do good work</h3>
 
-    <p>I have no patience for tricks, gimmicks, or gaming the system. I want to present things in their clearest, most honest forms, with as little decoration as possible.</p>
+    <h4>Good design shouldn’t hide its agenda</h4>
+    <p>A product should be clear about what it’s doing for you and what it’s doing with your information. You should be able to make use of it and move on with your life. Using psychological ticks to steal your attention is dishonest. I’m not interested in lies.</p>
 
-    <p>Devices, abilities, and situations are always part of the conversation. I'm not making something that’s pretty on my computer... I'm making some that works on yours. That doesn't mean boring design. It means understanding and synthesizing lots of aspects and situations, and creating what feels natural for that context.</p>
+    <h4>Good design shouldn’t hurt</h4>
+    <p>A product should help you. Whoever <strong>you</strong> are. If a side effect of a product ends up harming people, the design was not successful. It needs to be fixed and the harm remedied. Even more so, if its intention is make someone’s life worse, it should never be made. That goes for anything supporting guns, fascist ideology, racism, anti-LGBTQ, and patriarchal domination of society. I’m not here to help with any of that.</p>
 
-    <h2>Inclusion</h2>
-    <h3>I believe in designing for people.</h3>
-    <p>All people. Everyone. Our solutions should never make someone feel excluded or less than or not considered. I believe in making things that are good for humans.</p>
+    <h4>Good design shouldn’t be dull</h4>
+    <p>A product should be engaging. Remember when the internet was weird and fun? I’d like to keep that spirit alive. I’m not really excited by trends and cookie cutter designs (though I do enjoy these <a href="https://www.hummingbirdhigh.com/2015/01/24-hour-24-dollar-chocolate-chip-cookies.html">cookies</a>). I want to present things in their clearest form with a little surprise when possible.</p>
 
-    <p>There are no edge cases — there are people who need to get something done, find information, who are looking for help or advice or connection. And I want to help them.</p>
+    <h4>About me</h4>
+    <p>I value progressive politics, feminism, and compassion. I practice the <a href="https://www.youtube.com/watch?v=LUmgrve1sZc">gentle art</a> of Brazilian Ju-jitsu. I love to cook and share food with my family and friends. And, I’m probably listening at a podcast right now.</p>
 
-    <h2>Exploration</h2>
-    <h3>I believe in exploring options.</h3>
-    <p>My first idea may be the right one or not. By exploring, question our biases, and talking to people, we can design better, more valuable products.</p>
+    <p>My pronouns are he/him/his.</p>
+
+    {% for post in site.categories.principles %}
+    <hr>
+
+    <h4>Releated Ideas</h4>
+    <div class="leadin">
+
+        <div class="work-item">
+          <div class="work-image"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}" alt=""></div>
+          <div class="work-detail">
+            <h3>{{ post.title }}</h3>
+            <a href="{{ post.url }}"></a>
+          </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p>Looking for something else? <a href="{{ site.baseurl }}/ideas">See all Posts</a></p>
+
+    {% endfor %}
 
   </div>
 </div>
-
-{% if site.categories.principles == null %}
-  {% else %}
-  <div class="wrp-page-content">
-    <div class="page-content">
-      <h4>Things That I've Worked On</h4>
-      <div class="leadin">
-        {% for post in site.categories.principles %}
-          <div class="leadin__item">
-            <div class="leadin__image">
-              <a href="{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/ideas/{{ post.image }}"></a>
-            </div>
-            <div class="leadin__copy">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              {{ post.excerpt }}
-              <p><a href="{{ post.url }}" class="button">Read</a></p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-
-      <h3 class="text-center">Looking for something else? <a href="{{ site.baseurl }}/ideas">See all Posts</a></h3>
-    </div>
-  </div>
-{% endif %}

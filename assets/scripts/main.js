@@ -1,23 +1,28 @@
-// post blow up image - need to change inline css to classes
+// page fad in and out
 
-// $(window).scroll(function() {
-//     var scroll = $(window).scrollTop();
+$(document).ready(function() {
+$('body').css('display', 'none');
+$('body').fadeIn(500);
+});
 //
-//     if (scroll >= 200) {
-//         $(".post-header__img").addClass("scrolled-up").next().addClass("title-space");
-//     } else {
-//         $(".post-header__img").removeClass("scrolled-up").next().removeClass("title-space");
+// $(document).on("click", "a", function () {
+//
+//     // get the href attribute
+//     var newUrl = $(this).attr("href");
+//
+//     // veryfy if the new url exists or is a hash
+//     if (!newUrl || newUrl[0] === "#") {
+//         // set that hash
+//         location.hash = newUrl;
+//         return;
 //     }
+//
+//     // now, fadeout the html (whole page)
+//     $("html").fadeOut(function () {
+//         // when the animation is complete, set the new location
+//         location = newUrl;
+//     });
+//
+//     // prevent the default browser behavior.
+//     return false;
 // });
-
-// scrolling animations
-
-// window.onload(alert('hello world!'));
-
-jQuery('.page-content').addClass("hidden").viewportChecker({
-    classToAdd: 'visible animated fadeIn',
-    offset: 200
-   });
-
-// other animations
-$('.fadeinload').addClass('animated fadeIn');

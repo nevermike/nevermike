@@ -1,204 +1,134 @@
-// navigation.scss
-
-.home-wrp-header {
-
-  @include bp(phony) {
-    padding: 1em;
-    background: $c-secondary url(../images/hero-bg-alt.jpg);
-    background-size: cover;
-  };
-
-  @include bp(tablish) {
-    padding: 2em 4em;
-    height: 75vh;
-    background: $c-secondary url(../images/hero-bg-alt.jpg);
-    background-size: cover;
-  };
-
-}
-
 .wrp-header {
+  background: $c-light-alt;
+  box-shadow: 0 .25rem .25rem rgba($c-dark, .25);
 
   @include bp(phony) {
-    padding: 1em;
-    background: $c-secondary url(../images/hero-bg-alt.jpg);
-    background-size: cover;
-  };
-
-  @include bp(tablish) {
-    padding: 2em 4em;
-    background: $c-secondary url(../images/hero-bg-alt.jpg);
-    background-size: cover;
-  };
-
+    height: 3rem;
+  }
 }
 
-.home-site-header, .site-header {
-
-  @include bp(phony) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  };
+.site-header {
+  margin: auto;
 
   @include bp(tablish) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  };
-
+    align-content: center;
+    width: calc(100% * 316 / 350);
+  }
 }
 
 .logo {
-
-  @include bp(phony) {
-    width: 4em;
-  };
-
-  @include bp(tablish) {
-    width: 6em;
-  };
+  position: relative;
 
   a {
-    display: block;
-    @include transition-regular;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    border-radius: 100%;
+    box-shadow: 0 .25rem .25rem rgba($c-dark, .15);
   }
 
+  @include bp(phony) {
+    position: absolute;
+    top: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6rem;
+  }
+
+  @include bp(tablish) {
+    width: 7rem;
+
+    a {
+      position: absolute;
+      bottom: -3rem;
+    }
+  }
 }
 
 .site-nav {
 
   @include bp(phony) {
-    // margin: 1rem auto .25rem;
-    // width: 100%;
-
-    // testing new mobile ideas
-    z-index: 200;
     position: fixed;
     bottom: 0;
-    left: 0;
-    padding: 1rem 0;
+    z-index: 1000;
+    padding-bottom: 3rem;
     width: 100%;
-    background: rgba($c-secondary, .85);
+    background: rgba($c-primary, .95);
+  }
 
-    // testing new mobile ideas
-
-  };
+  @include bp(tablish) {
+    margin: 1rem 0 1rem;
+  }
 
   ul {
-    display: flex;
-
-    @include bp(phony) {
-      width: 100%;
-      justify-content: space-between;
-    };
-
-    @include bp(tablish ){
-      justify-content: flex-end;
-    };
-  }
-  li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 
     @include bp(phony) {
-      width: calc(100% * 1 / 3);
-      text-align: center;
-      font-weight: bold;
-    };
+      display: flex;
+      justify-content: space-around;
 
-    +li {
-      margin: 0 0 0 2em;
+      li {
+        margin: 0;
+        padding: 0;
+        width: calc(100% * 1 / 3 - 1em);
+        text-align: center;
+      }
+    }
 
-      @include bp(phony) {
-        margin: 0 0 0 1em;
-      };
+    @include bp(tablish) {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        margin: 0;
+        padding: 0;
+
+        +li {
+          margin-left: 3rem;
+        }
+      }
     }
   }
 
   a {
+
+    @include bp(phony) {
+      font-size: 1em;
+      color: $c-white;
+    }
+
     display: block;
-    color: $c-light;
+    margin-bottom: .5rem;
+    padding: 1rem 1rem .5rem 1rem;
+    font-size: 1.25rem;
     text-decoration: none;
-    border-bottom: .225em solid rgba($c-primary, 0);
-    @include transition-regular;
+    color: $c-primary;
+    background-image: linear-gradient(90deg, $c-primary, rgba($c-primary, .5));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% .25rem;
+    transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
 
-    &:hover {
-      border-bottom: .225em solid rgba($c-medium, .75);
+    @include bp(phony) {
+      background-image: linear-gradient(90deg, $c-white, $c-white);
     }
+
+      &:hover, :focus {
+        text-decoration: none;
+        background-size: 100% .25rem;
+      }
+
     &.active {
-      border-bottom: .225em solid $c-primary;
-    }
+      background-image: linear-gradient(90deg, $c-secondary, $c-secondary);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 100% .25rem;
 
-    @include bp(phony) {
-      padding-top: .5rem;
-      border-bottom: none !important;
-      border-top: .225em solid rgba($c-primary, 0);
-
-      &:hover {
-        border-top: .225em solid rgba($c-medium, .75);
-      }
-      &.active {
-        border-top: .225em solid $c-primary;
-      }
-    };
-
-    @include bp(tablish) {
-      padding: .5em 1em;
-      font-size: 1.25em;
-    };
-  }
-}
-
-.hero {
-
-  @include bp(phony) {
-    padding: 6rem 0;
-  };
-
-  @include bp(tablish) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 89.75%;
-  };
-
-  &__copy {
-    font-family: $headline-font;
-    text-align: center;
-    color: $c-light;
-
-    @include bp(phony) {
-      font-size: 3.5em;
-      line-height: 1;
-    };
-
-    @include bp(tablish) {
-      margin: auto;
-      width: 66.66666667%;
-      max-width: 54rem;
-      font-size: 6em;
-      line-height: 1;
-    };
-
-    span {
-      position: relative;
-
-      &:after {
-        content: " ";
-        position: absolute;
-        top: 50%;
-        left: -.25rem;
-        width: 110%;
-        height: 1rem;
-        background: $c-medium;
-        opacity: .85;
-        transform: rotate(-1.6deg);
+      @include bp(phony) {
+        background-image: linear-gradient(90deg, $c-secondary, $c-secondary);
       }
     }
+
   }
 }

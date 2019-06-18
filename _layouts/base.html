@@ -8,32 +8,26 @@
     <![endif]-->
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Hind:400,500|Lora:700i|Montserrat:800|Gochi+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,500|Lora:700i|Montserrat:800|Gochi+Hand" rel="stylesheet"
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     <script src="{{ site.baseurl }}/assets/scripts/vendor/modernizr-2.8.3.min.js"></script>
 
   </head>
-  <body class="animated fadeIn">
+  <body>
 
-    <div class="wrp-site">
-      {% include navigation.html %}
-      <div class="container">
-        {{ content }}
+    <div class="wrp-screen">
+      <div class="wrp-site">
+        {% include navigation.html %}
+
+        <div class="container">
+          {{ content }}
+        </div>
+
       </div>
+      {% include footer.html %}
     </div>
-
-    <div class="wrp-signoff">
-      <div class="signoff">
-        <h3>Hi, I'm Michael</h3>
-        <p>I’m a designer, educator, and strategist working world-wide from Philadelphia.</p>
-        <p>Ready to talk about your awesome idea, or make a service inquiry? I’m happy to help.</p>
-        <p><a href="mailto:michael@nevermike.com?subject=Hello%20From%20The%20Internet" class="button">Email Me</a></p>
-      </div>
-    </div>
-
-    {% include footer.html %}
 
     <!-- Scripts -->
 

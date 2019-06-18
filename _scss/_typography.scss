@@ -4,7 +4,7 @@
 $body-font: 'Hind', sans-serif;
 $subheadline-font: 'lora', serif;
 $headline-font: 'Montserrat', sans-serif;
-$handwriting: 'Gochi Hand', 'Hind';
+$handwriting: 'Gochi Hand', 'Hind', sans-serif;
 
 // sizing
 
@@ -23,26 +23,39 @@ $browser-context: 18; //sets base font size
 
 // specs
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: $body-font;
-  font-size: em(18);
+  font-size: em(24);
   font-weight: 400;
   line-height: 1.4;
   color: $c-dark;
-  background: $c-dark-alt;
-  background: linear-gradient($c-white, $c-dark-alt);
+  width: 100%;
+  height: 100%;
+  background: rgba($c-primary, .5);
+
+  @include bp(phony) {
+    font-size: em(20);
+  }
 }
 
 .wrp-page-content, .contact {
 
   a {
-    position: relative;
-    text-decoration: none;
     color: $c-secondary;
-    @include transition-regular;
+    text-decoration: none;
+    background-image: linear-gradient(90deg, $c-primary, rgba($c-primary, .5));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% .25rem;
+    transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, :focus {
+      text-decoration: none;
+      background-size: 100% .25rem;
     }
   }
 }
@@ -58,59 +71,87 @@ p {
   margin: 1em 0 0;
   font-weight: 400;
   line-height: 1.6;
+
+  @include bp(phony) {
+    padding: 0;
+  }
+  @include bp(tablish) {
+    padding: 0 2rem;
+  }
 }
 
 h1 {
-  margin: 1em 0 0;
-  font-size: em(60);
+  margin: 1rem 0 0;
   font-family: $headline-font;
   font-weight: 800;
   line-height: 1.2;
-  color: $c-medium;
+  color: $c-primary;
 
-  // @include bp(phony) {
-  //   font-size: em(48.6);
-  // };
+  @include bp(phony) {
+    font-size: em(28);
+  }
+  @include bp(tablish) {
+    font-size: em(32);
+  }
+  @include bp(screeny) {
+    font-size: em(44);;
+  }
 }
 
 h2 {
-  margin: 1.75em 0 0;
-  font-size: em(38);
+  margin: 3rem 0 0;
   font-family: $subheadline-font;
   font-weight: 700;
   line-height: 1.25;
   font-style: italic;
   color: $c-secondary;
+
+  @include bp(phony) {
+    font-size: em(28);
+  }
+  @include bp(tablish) {
+    font-size: em(32);
+  }
+  @include bp(screeny) {
+    font-size: em(36);;
+  }
 }
 
 h3 {
-  margin: 1.325em 0 0;
+  margin: 2rem 0 0;
   font-size: em(32);
   font-family: $body-font;
   font-weight: 500;
   line-height: 1.25;
-  color: $c-medium-alt2;
+  color: darken($c-medium, 10%);
+
+  @include bp(phony) {
+    font-size: em(22);
+  }
+  @include bp(tablish) {
+    font-size: em(24);
+  }
+  @include bp(screeny) {
+    font-size: em(32);;
+  }
 }
 
 h4 {
-  margin: 2.65em 0 0;
-  font-size: em(32);
-  font-family: $body-font;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 1.25;
-  color: $c-medium-alt;
-  text-align: center;
-}
-
-
-h5 {
-  margin: 1.325em 0 0;
-  font-size: em(24);
+  margin: 1.5rem 0 0;
   font-family: $body-font;
   font-weight: 500;
   line-height: 1.25;
-  color: $c-medium;
+  color: lighten($c-primary, 20%);
+
+  @include bp(phony) {
+    font-size: em(20);
+  }
+  @include bp(tablish) {
+    font-size: em(22);
+  }
+  @include bp(screeny) {
+    font-size: em(24);
+  }
 }
 
 ul, ol {
@@ -136,14 +177,29 @@ blockquote {
   }
 }
 
+figcaption {
+  margin: .5rem 1.5rem 0 0;
+  font-size: em(12);
+  font-style: italic;
+  text-align: right;
+  color: $c-medium-alt2;
+}
+
 h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child,
 p:first-child,ol:first-child,ul:first-child,dl:first-child {
   margin-top: 0;
 }
 
 hr {
-  margin-top: 4rem;
+  margin: 2rem 0;
   border: none;
-  border-top: .025em solid lighten($c-medium, 20%);
-  // border-bottom: .025em solid lighten($c-medium, 5%);
+  height: .25rem;
+  background: linear-gradient(40deg, $c-secondary 0%, rgba($c-primary, 0.5) 40%, rgba($c-primary, 0.5) 60%, $c-secondary 100%) no-repeat 50% 50% / 100% 100%;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
 }

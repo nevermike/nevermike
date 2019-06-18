@@ -3,7 +3,7 @@ layout: base
 ---
 
 <header class="page-title">
-  <img src="{{ site.baseurl }}/assets/images/ideas/{{ page.image }}" alt="">
+  <img src="{{ site.baseurl }}{{ site.baseurl }}/assets/images/work/{{ page.image }}" alt="">
 </header>
 
 <div class="wrp-page-content">
@@ -11,11 +11,17 @@ layout: base
 
     <article class="post-content">
       <h1>{{ page.title }}</h1>
-
-      <p>{{ page.description }}</p>
+      <h2>{{ page.description }}</h2>
 
       {{ content }}
+
     </article>
+
+    <hr>
+
+    <p><a href="{{ site.baseurl }}/case-studies/">More Case Studies</a></p>
+
+    <hr>
 
   </div>
 </div>
