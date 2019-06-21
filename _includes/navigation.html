@@ -4,7 +4,7 @@
       <a href="/" class="popit"><img src="{{ site.baseurl }}/assets/images/nevermike.png" alt="It's me!"></a>
     </div>
 
-    <div class="site-nav">
+    <nav aria-label="Primary" class="site-nav">
       <ul>
         {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
           {% for p in navigation_pages %}
@@ -17,6 +17,6 @@
             {% endif %}
           {% endfor %}
       </ul>
-    </div>
+    </nav>
   </header>
 </div>

@@ -24,6 +24,7 @@
   a {
     border-radius: 100%;
     box-shadow: 0 .25rem .25rem rgba($c-dark, .15);
+    background: $c-light-alt;
   }
 
   @include bp(phony) {

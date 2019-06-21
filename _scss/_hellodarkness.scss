@@ -1,0 +1,122 @@
+// Dark mode
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: rgba($c-light-alt, .85);
+    background: $c-dark;
+  }
+
+  .wrp-page-content, .contact {
+
+    a {
+      color: rgba($c-secondary, .85);
+      background-image: linear-gradient(90deg, rgba($c-primary, .95), rgba($c-primary, .5));
+    }
+  }
+
+  h1 {
+    color: rgba($c-primary, .95);
+  }
+  h2 {
+    color: rgba($c-secondary, .85);
+  }
+
+  hr {
+
+    background: linear-gradient(40deg, rgba($c-secondary, .5) 0%, rgba($c-primary, 0.5) 40%, rgba($c-primary, 0.5) 60%, rgba($c-secondary, .5) 100%) no-repeat 50% 50% / 100% 100%;
+  }
+
+  img {
+    opacity: .75;
+    @include transition-regular;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .hero {
+    h1 {
+      color: rgba($c-light-alt, .65);
+      text-shadow: -.125rem -.125rem 1rem rgba($c-secondary, .5), .125rem .125rem 5rem rgba($c-secondary, .5), .25rem .25rem 0 rgba($c-primary, .25), .75rem .75rem .5rem rgba($c-primary, .25), 0 1rem 1rem rgba($c-dark, .5);
+    }
+  }
+
+  .wrp-header {
+    background: lighten($c-dark-alt, 5%);
+  }
+
+  .logo {
+
+    a {
+      background: $c-dark-alt;
+    }
+  }
+
+  .site-nav {
+
+    ul {
+
+      a {
+        color: lighten($c-primary, 20%);
+
+        &.active {
+          background-image: linear-gradient(90deg, rgba($c-secondary, .75), rgba($c-secondary, .75));
+        }
+      }
+    }
+  }
+
+  // from template-helpers
+
+  .wrp-site {
+    background: $c-dark;
+  }
+
+  .wrp-page-content {
+    background: $c-dark;
+  }
+
+  .page-title {
+
+    h1 {
+      color: rgba($c-primary, .95);
+      background: $c-dark;
+    }
+
+    img {
+      border-color: $c-dark;
+      border-bottom: none;
+      background: $c-dark;
+    }
+  }
+
+  .wrp-site-footer {
+    background: rgba($c-dark-alt, .65);
+  }
+
+  .footer-tag {
+    .tag-header {
+      color: rgba($c-secondary, .85);
+    }
+  }
+
+  .elsewhere {
+    a {
+      background: rgba($c-secondary, .85);
+    }
+  }
+
+  // cards
+
+  .work-item {
+    border-color: darken($c-dark-alt, 10%);
+    background: darken($c-dark-alt, 10%);
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: 0 .25rem .75rem rgba($c-primary, .15);
+    }
+  }
+
+}

@@ -58,7 +58,6 @@
     margin: auto;
     text-align: center;
     background: $c-light-alt;
-    // text-shadow: -.125rem -.125rem .125rem rgba($c-white, .5),0 .125rem .5rem rgba($c-primary, .5);
 
     @include bp(phony) {
       padding-top: 1rem;
@@ -82,7 +81,7 @@
   img {
     min-height: 5vh;
     text-align: center;
-    border: .25rem solid $c-light;
+    border: .25rem solid $c-light-alt;
     border-bottom: none;
     background: $c-light-alt;
 
