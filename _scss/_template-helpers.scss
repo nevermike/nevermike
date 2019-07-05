@@ -229,6 +229,13 @@
   margin-top: 2rem;
   text-align: center;
 
+  @include bp(phony) {
+    border-radius: 1rem;
+  }
+  @include bp(tablish) {
+    border-radius: 2rem;
+  }
+
   img {
 
     @include bp(phony) {

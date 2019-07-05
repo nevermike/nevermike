@@ -116,6 +116,7 @@
 
     &:hover {
       box-shadow: 0 .25rem .75rem rgba($c-primary, .15);
+      background: darken($c-dark-alt, 5%);
     }
   }
 
